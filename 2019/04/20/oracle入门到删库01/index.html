@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="1234title: oracle 入门到删库  date: 2019-4-20   categories: 数据库toc: true                   oracle 是一种关系型数据库               1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock; 常用命令 (">
+<meta name="description" content="oracle 是一种关系型数据库            1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://yoursite.com/2019/04/20/oracle数据库/index.html">
+<meta property="og:title" content="oracle入门到删库01">
+<meta property="og:url" content="http://yoursite.com/2019/04/20/oracle入门到删库01/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="1234title: oracle 入门到删库  date: 2019-4-20   categories: 数据库toc: true                   oracle 是一种关系型数据库               1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock; 常用命令 (">
+<meta property="og:description" content="oracle 是一种关系型数据库            1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-20T04:00:06.016Z">
+<meta property="og:updated_time" content="2019-04-20T04:40:51.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
-<meta name="twitter:description" content="1234title: oracle 入门到删库  date: 2019-4-20   categories: 数据库toc: true                   oracle 是一种关系型数据库               1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock; 常用命令 (">
+<meta name="twitter:title" content="oracle入门到删库01">
+<meta name="twitter:description" content="oracle 是一种关系型数据库            1.使用scott用户登录，需要先解锁 （1）使用DBA登录 （2）解锁命令：alter user scott account unlock|lock;">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/20/oracle数据库/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/20/oracle入门到删库01/">
 
 
 
 
 
-  <title> | 个人博客</title>
+  <title>oracle入门到删库01 | 个人博客</title>
   
 
 
@@ -239,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/20/oracle数据库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/20/oracle入门到删库01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Maybe I can">
@@ -256,7 +256,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">oracle入门到删库01</h1>
         
 
         <div class="post-meta">
@@ -268,7 +268,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T12:00:32+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T12:39:22+08:00">
                 2019-04-20
               </time>
             
@@ -278,6 +278,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -337,10 +359,11 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: oracle 入门到删库  </span><br><span class="line">date: 2019-4-20   </span><br><span class="line">categories: 数据库</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
-<h1 id="oracle-是一种关系型数据库"><a href="#oracle-是一种关系型数据库" class="headerlink" title="                  oracle 是一种关系型数据库               "></a><strong><strong>                  oracle 是一种关系型数据库               </strong></strong></h1><p>1.使用scott用户登录，需要先解锁</p>
+        <p><strong>oracle 是一种关系型数据库</strong>           </p>
+<p>1.使用scott用户登录，需要先解锁</p>
 <p>（1）使用DBA登录</p>
 <p>（2）解锁命令：alter user scott account unlock|lock;</p>
+<a id="more"></a>
 <p><strong>常用命令</strong></p>
 <p>(a)sqlplus</p>
 <p>1.sqlplus /nolog  不登录  匿名连接到数据库  首先做次操作</p>
@@ -358,7 +381,6 @@
 <p>1.spool d:/test.txt  写入路径 </p>
 <p>2.select * from emp;     查询结果</p>
 <p>3.spool off  写入完毕</p>
-<a id="more"></a>
 <p><strong>distinct  取出重复数据</strong></p>
 <p>出现在distinct 后面的所有字段都是重复的，系统才会认为这些数据是重复数据。</p>
 <p>例子：select distinct e.sal from emp e</p>
@@ -565,17 +587,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,6 +610,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
 
             
 
@@ -617,22 +639,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#oracle-是一种关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">                  oracle 是一种关系型数据库               </span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
