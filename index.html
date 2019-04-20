@@ -239,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/oracle数据库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/20/oracle数据库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Maybe I can">
@@ -258,7 +258,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/19/oracle数据库/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/04/20/oracle数据库/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-19T22:44:53+08:00">
-                2019-04-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T12:00:32+08:00">
+                2019-04-20
               </time>
             
 
@@ -340,8 +340,8 @@
 
       
         
-          
-            <h1 id="oracle-是一种关系型数据库"><a href="#oracle-是一种关系型数据库" class="headerlink" title="                  oracle 是一种关系型数据库               "></a><strong><strong>                  oracle 是一种关系型数据库               </strong></strong></h1><p>1.使用scott用户登录，需要先解锁</p>
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: oracle 入门到删库  </span><br><span class="line">date: 2019-4-20   </span><br><span class="line">categories: 数据库</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
+<h1 id="oracle-是一种关系型数据库"><a href="#oracle-是一种关系型数据库" class="headerlink" title="                  oracle 是一种关系型数据库               "></a><strong><strong>                  oracle 是一种关系型数据库               </strong></strong></h1><p>1.使用scott用户登录，需要先解锁</p>
 <p>（1）使用DBA登录</p>
 <p>（2）解锁命令：alter user scott account unlock|lock;</p>
 <p><strong>常用命令</strong></p>
@@ -361,120 +361,13 @@
 <p>1.spool d:/test.txt  写入路径 </p>
 <p>2.select * from emp;     查询结果</p>
 <p>3.spool off  写入完毕</p>
-<p><strong>distinct  取出重复数据</strong></p>
-<p>出现在distinct 后面的所有字段都是重复的，系统才会认为这些数据是重复数据。</p>
-<p>例子：select distinct e.sal from emp e</p>
-<p><strong>where 后面的条件</strong></p>
-<p>– ＝，！＝,&lt;&gt;，&lt;,&gt;,&lt;=,&gt;=,any,some,all</p>
-<p>– 部门编号不是10的员工</p>
-<p>例子：select *from emp e where e.deptno &lt;&gt; 10;</p>
-<p>–  &gt;all（） 相当于是大于最大值</p>
-<p>–  &gt;some（） 相当于是大于最小值</p>
-<p>–  &gt; any() 是查询最大和最小值之间</p>
-<p>例子：select * from emp e where e.sal &gt; any(2000,5000);</p>
-<p><strong>is null 和 is not null</strong></p>
-<p>– oracle 中  null ！= null</p>
-<p>– 所以判断某个字段是否为null 要用 is null 或 is not null</p>
-<p>– 查询奖金不为空的员工</p>
-<p>例子：select *from emp e where e.comm is not null</p>
-<p><strong>between x and y</strong></p>
-<p>–查询薪资处于1000-2000之间的员工</p>
-<p>例子：select *from emp e where  e.sal between 1000 and 2000</p>
-<p><strong>in（list），not in（list）</strong></p>
-<p>–查询部门编号不是10 和 20的员工</p>
-<p>例子：select e.*from  emp e where e.deptno not in(10,20)</p>
-<p><strong>exists（sub－query）</strong></p>
-<p>子查询有数据则表达式返回true 则执行exists前面的查询语句</p>
-<p>select <em>from  emp e where exists(select </em> from emp e  where 1 = 2)</p>
-<p><strong>like  _ ,%,escape ‘\‘   _\% escape ‘\’</strong></p>
-<p>– 将所有名字是以s开头的员工查询出来</p>
-<p>– 模糊查询  _ 代表有一个不确定的字符</p>
-<p>– % 有多个不确定的字符</p>
-<p>列子：select e.ename from  emp e  where e.ename like ‘%\%%’ escape ‘\’</p>
-<p>oracle里面的转义符是自定义的，用escape来定义自己想要的转义符</p>
-<p><strong>or 和 and</strong></p>
-<p>–列出deptno为10或者30，并且工资&gt;2000的所有人。</p>
-<p>– and 的优先级高于 or</p>
-<p>例子：select *from  emp e  where (e.deptno = 10 or e.deptno = 30) and e.sal &gt; 2000</p>
-<p><strong>order by</strong></p>
-<p>按照单个列排序</p>
-<p>–order  by col</p>
-<p>降序和升序</p>
-<p>–order  by col desc (asc)</p>
-<p>按照多个列排序（优先级）</p>
-<p>–order by  col1 desc(asc),  col2  desc(asc)</p>
-<p><strong>–union all 全集  不会去除重复数据</strong></p>
-<p>​        select * from emp e where e.deptno = 10</p>
-<p>​        union all</p>
-<p>​        select * from emp e where e.sal &gt; 2000</p>
-<p><strong>–union 并集（去重）</strong></p>
-<p>​        select * from emp e where e.deptno = 10</p>
-<p>​        union </p>
-<p>​        select * from emp e where e.sal &gt; 2000</p>
-<p><strong>–intersect 交集</strong></p>
-<p>​        select * from emp e where e.deptno = 10</p>
-<p>​        intersect</p>
-<p>​        select * from emp e where e.sal &gt; 2000</p>
-<p><strong>–minus 差集</strong></p>
-<p>​        select * from emp e where e.deptno = 10</p>
-<p>​        minus</p>
-<p>​        select * from emp e where e.sal &gt; 2000</p>
-<p><strong>（NVL(comm,0) comm取空值时用0替代）</strong></p>
-<p>例子： select e.ename,(e.sal+nvl(e.comm,0))*12 年收入 from  emp e  </p>
-<p><strong>字符函数</strong></p>
-<p>– dual 称之为虚表    用于检测查询语句的语法</p>
-<p>– 拼接两个字符串</p>
-<p>select concat(‘hello’, ‘nihao’) from dual</p>
-<p>– 首字母大写</p>
-<p>select initcap(e.ename) from emp e</p>
-<p>– 字符搜索</p>
-<p>select instr(‘abcda’,’a’,1,2) from dual</p>
-<p>–字符串左填充</p>
-<p>select lpad(‘abc’,10,’#’) from dual</p>
-<p>–字符串右填充</p>
-<p>select rpad(‘abc’,10,’#’) from dual</p>
-<p><strong>日期函数</strong></p>
-<p>– 返回系统当前日期</p>
-<p>例子：select sysdate from dual</p>
-<p>– 返回指定月数后的日期</p>
-<p>例子：select e.ename,e.hiredate 入职日期,add_months(e.hiredate,6) 转正日期</p>
-<p>from emp e </p>
-<p>– 获取本月最后一天的日期</p>
-<p>select last_day(sysdate) from dual</p>
-<p>– 获取最近的周日  月初   年初</p>
-<p>select sysdate 当时日期,</p>
-<p>round(sysdate) 最近0点日期,</p>
-<p>round(sysdate,’day’) 最近星期日,</p>
-<p>round(sysdate,’month’) 最近月初,</p>
-<p>round(sysdate,’q’) 最近季初日期, </p>
-<p>round(sysdate,’year’) 最近年初日期 from dual;</p>
-<p>– 获取本周周日   本月月初  本年年初</p>
-<p>select sysdate 当时日期,</p>
-<p>trunc(sysdate) 今天日期,</p>
-<p>trunc(sysdate,’day’) 本周星期日,</p>
-<p>trunc(sysdate,’month’) 本月初,</p>
-<p>trunc(sysdate,’q’) 本季初日期, </p>
-<p>trunc(sysdate,’year’) 本年初日期 from dual;</p>
-<p>—  转换函数   将数字转换为字符串</p>
-<p>—  参数1  需要转换为字符串的数字   </p>
-<p>—  参数2  是规定转换得到的字符串的格式</p>
-<p>select to_char(12345,’99,999.99’) from dual</p>
-<p><strong>–  将日期转换为字符串</strong></p>
-<p>select  to_char(sysdate,’yyyy-MM-dd HH:mi:ss’) from  dual ;</p>
-<p>select to_char(sysdate,’d’) from dual;</p>
-<p><strong>– to_date   将表示日期的字符串转换为日期类型</strong></p>
-<p>select to_date(‘2018年11月8日’,’YYYY”年”MM”月”DD”日”‘) from dual</p>
-<p>select to_date(‘2018-11-8’,’YYYY-MM-DD’) from dual</p>
-<p>Select to_date(‘04,05,19,10,23,40’,’yy,mm,dd,hh12,mi,ss’) from dual;</p>
-<p><strong>– to_number</strong></p>
-<p>select to_number(‘$123,456’,’999,999’)  from dual</p>
-<p><strong>—  单行函数嵌套</strong></p>
-<p>— 没有上司的人 写为boss</p>
-<p>select e.ename,nvl(to_char(e.mgr),’boss’)</p>
-<p>from emp e </p>
-<p>where e.mgr is null</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/20/oracle数据库/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
