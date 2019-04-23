@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="​     流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：顺序结构、分支结构和循环结构，如下图所示： 图示： ​">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java 笔记3">
+<meta property="og:url" content="https://sj13579.github.io/2019/04/20/java笔记3/index.html">
+<meta property="og:site_name" content="也许我可以">
+<meta property="og:description" content="​     流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：顺序结构、分支结构和循环结构，如下图所示： 图示： ​">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d1.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d2.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d3.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d4.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d5.jpg">
+<meta property="og:updated_time" content="2019-04-23T13:36:21.130Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java 笔记3">
+<meta name="twitter:description" content="​     流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：顺序结构、分支结构和循环结构，如下图所示： 图示： ​">
+<meta name="twitter:image" content="https://sj13579.github.io/2019/04/20/java笔记3/d1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sj13579.github.io/2019/04/20/java笔记3/">
+
+
+
+
+
+  <title>java 笔记3 | 也许我可以</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://sj13579.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">也许我可以</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录中成长</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/20/java笔记3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maybe I can">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/QQ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="也许我可以">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java 笔记3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T00:00:00+08:00">
+                2019-04-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-23T21:36:21+08:00">
+                2019-04-23
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/20/java笔记3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/20/java笔记3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​    </p>
+<h2 id="流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。"><a href="#流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。" class="headerlink" title="流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。"></a>流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。</h2><p>其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：顺序结构、分支结构和循环结构，如下图所示：</p>
+<p>图示：<br><img src="/2019/04/20/java笔记3/d1.jpg" alt></p>
+<p>​      <a id="more"></a><br>​<br>​      if单分支选择结构<br>​      if语句对条件表达式进行一次测试，若测试为真，则执行下面的语句，否则跳过该语句<br>​<br>​      图示：<br><img src="/2019/04/20/java笔记3/d2.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package ifdemo;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double n1 = 6*Math.random();</span><br><span class="line">		double n2 = 6*Math.random();</span><br><span class="line">		double n3 = 6*Math.random();</span><br><span class="line">		int sum = (int)(n1 + n2 + n3);</span><br><span class="line">		if (sum &gt;= 15) &#123;</span><br><span class="line">			System.out.println(&quot;今天手气不错&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		if (sum &gt;= 10 &amp;&amp; sum &lt; 15) &#123;</span><br><span class="line">			System.out.println(&quot;今天手气一般&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		if (sum &lt; 10) &#123;</span><br><span class="line">			System.out.println(&quot;今天手气不好&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;今日运势:&quot;+sum);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="if-else-双分支选择结构"><a href="#if-else-双分支选择结构" class="headerlink" title="if-else**双分支选择结构**"></a><strong>if-else**</strong>双分支选择结构**</h2><p>当条件表达式为真时，执行语句块1，否则，执行语句块2。也就是else部分<br>图示：<br><img src="/2019/04/20/java笔记3/d3.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">package ifdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">抽奖说明 会员号的百位数字和随机数相等 则会幸运会员 </span><br><span class="line">输出 XXXX会员,您是幸运会员,否则输出  XXXX 谢谢您的支持</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Test02 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//创建一个Scanner的变量 用于输入会员卡卡号</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入会员卡卡号&quot;);</span><br><span class="line">		int no = input.nextInt();</span><br><span class="line">		//获取会员卡百位数字  213</span><br><span class="line">		int b = (no%1000)/100;</span><br><span class="line">		</span><br><span class="line">		//生成一个0~9的随机数</span><br><span class="line">		int number = (int)(10*Math.random());</span><br><span class="line">		</span><br><span class="line">		//判断会员卡卡号百位数字是否和随机数相等</span><br><span class="line">		if (b == number) &#123;</span><br><span class="line">			System.out.println(no+&quot;恭喜您，中奖了&quot;);</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			System.out.println(no+&quot;很遗憾没中奖.谢谢惠顾&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;程序结束&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">——————————</span><br><span class="line">package ifdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">小孩搬桌子: 年龄大于7岁可以搬桌子了,大于5岁且为男孩,也可以搬桌子了</span><br><span class="line"> 否则不可以搬动桌子 你还太年轻了</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Test03 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入年龄&quot;);</span><br><span class="line">		//输入年两</span><br><span class="line">		int age = input.nextInt();</span><br><span class="line">		System.out.println(&quot;请选择性别:1,男  2,女&quot;);</span><br><span class="line">		//输入性别</span><br><span class="line">		int gender = input.nextInt();</span><br><span class="line">		</span><br><span class="line">		if (age &gt;= 7) &#123;</span><br><span class="line">			System.out.println(&quot;可以搬桌子&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		if (age &gt;= 5 &amp;&amp; age &lt; 7) &#123;</span><br><span class="line">			if (gender == 1) &#123;</span><br><span class="line">				System.out.println(&quot;五岁到七岁之间的男孩可以搬桌子&quot;);</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				System.out.println(&quot;五岁到七岁之间的女孩不可以搬桌子&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if (age &lt; 5) &#123;</span><br><span class="line">			System.out.println(&quot;你不可以搬桌子，太年轻&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="If-else-if-else-多分支选择结构"><a href="#If-else-if-else-多分支选择结构" class="headerlink" title="If-else if-else**多分支选择结构**"></a><strong>If-else if-else**</strong>多分支选择结构**</h3><p>if(布尔表达式1) {</p>
+<p>语句块1；</p>
+<p>} else if(布尔表达式2) {</p>
+<p>语句块2；</p>
+<p>}………</p>
+<p>else if(布尔表达式n){</p>
+<p>​    语句块n;</p>
+<p>} else {</p>
+<p>​    语句块n+1;</p>
+<p>}</p>
+<p>逐条if语句进行判断，条件匹配，进入语句体，否则对if语句继续匹配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package ifelseif;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 0~3  婴儿  好好吃奶</span><br><span class="line"> * 3~5  儿童  好好玩</span><br><span class="line"> * 6~22 少年 好好学习</span><br><span class="line"> * 23~60 中年  好好挣钱</span><br><span class="line"> * 60~80 中老年  好好补钙</span><br><span class="line"> * 80~   老年  好好晒太阳</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> *	6~23  精力旺盛   时间充足   财力不足</span><br><span class="line"> *	24~60 精力旺盛  时间不足  财力充足</span><br><span class="line"> *	60~  精力不足   时间充足  财力充足</span><br><span class="line"> */</span><br><span class="line">public class IfElseIf &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入年龄&quot;);</span><br><span class="line">		int age = input.nextInt();</span><br><span class="line">		if (age &lt;= 3) &#123;</span><br><span class="line">			System.out.println(&quot;婴儿，应该好好吃奶&quot;);</span><br><span class="line">		&#125;else if(age &lt; 6)&#123;</span><br><span class="line">			System.out.println(&quot;儿童，好好玩&quot;);</span><br><span class="line">		&#125;else if(age &lt; 22)&#123;</span><br><span class="line">			System.out.println(&quot;少年，要好好学习&quot;);</span><br><span class="line">		&#125;else if(age &lt;= 60)&#123;</span><br><span class="line">			System.out.println(&quot;中年，要好好工作&quot;);</span><br><span class="line">		&#125;else if (age &lt;= 80) &#123;</span><br><span class="line">			System.out.println(&quot;中老年，要补钙&quot;);</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			System.out.println(&quot;老年人，多晒晒太阳&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序结束&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while-循环"><a href="#while-循环" class="headerlink" title="while**循环**"></a><strong>while**</strong>循环**</h2><ul>
+<li>在循环刚开始时，会计算一次“布尔表达式”的值，若条件为真，执行循环体。而对于后来每一次额外的循环，都会在开始前重新计算一次。</li>
+<li>语句中应有使循环趋向于结束的语句，否则会出现无限循环–––”死”循环。</li>
+</ul>
+<p>图示：<br><img src="/2019/04/20/java笔记3/d4.jpg" alt></p>
+<h2 id><a href="#" class="headerlink" title=" "></a> </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">package whiledemo;</span><br><span class="line">/**</span><br><span class="line"> * 循环4要素</span><br><span class="line"> * 1，初始化</span><br><span class="line"> * 2，条件判断</span><br><span class="line"> * 3，循环体</span><br><span class="line"> * 4，迭代</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class WhileDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int i = 0;//初始化操作</span><br><span class="line">		while(i &lt; 1000)&#123;//条件判断的操作</span><br><span class="line">			//循环体</span><br><span class="line">			System.out.println(i);</span><br><span class="line">			//迭代  就是让条件判断趋向于false的操作</span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序结束&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---------</span><br><span class="line">package test;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 练习3:商场推出幸运抽奖活动 根据抽奖规则计算会员卡号各位数字之和为16,则为幸运会员</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Test03 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入四位数的会员卡卡号&quot;);</span><br><span class="line">		//接收到用户输入的卡号</span><br><span class="line">		int cardNo = input.nextInt();</span><br><span class="line">		//求出卡号千位上的数字</span><br><span class="line">		int k  = cardNo/1000;</span><br><span class="line">		//求出卡号百位上的数字</span><br><span class="line">		int b = (cardNo%1000)/100;</span><br><span class="line">		//求出卡号十位上的数字</span><br><span class="line">		int s = (cardNo%100)/10;</span><br><span class="line">		//求出卡号个位上的数字</span><br><span class="line">		int g = cardNo%10;</span><br><span class="line">//		求和</span><br><span class="line">		int sum = k + b + s + g;</span><br><span class="line">		String message = (sum == 16)?&quot;恭喜你，中奖了！&quot;:&quot;很遗憾，本次没有中奖&quot;;</span><br><span class="line">		System.out.println(message);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="switch-多分支选择结构"><a href="#switch-多分支选择结构" class="headerlink" title="switch**多分支选择结构**"></a><strong>switch**</strong>多分支选择结构**</h2><p>根据表达式值的不同执行许多不同的操作</p>
+<p>switch (表达式)  {</p>
+<p>case 值1 : </p>
+<p>语句序列;</p>
+<p>[break];</p>
+<p>case 值2:</p>
+<p> 语句序列;</p>
+<p>[break] ;</p>
+<p>​     … … …      … …</p>
+<p>[default:</p>
+<p> 默认语句 ;]</p>
+<p>} </p>
+<p>1.switch语句会根据表达式的值从相匹配的执行，一直执行到break标签处</p>
+<p>语句处或者是switch语句的末尾。与任一case值不匹配，则进入default语句(如果有的话)  </p>
+<p>2.只能处理等值条件判断的情况，且表达式必须为byte，short，int或char类型 ，String 不能是double,float.  long</p>
+<p>3.常量值必须是与表达式类型兼容的特定的一个常量</p>
+<p>4.不允许有重复的case值 </p>
+<p>5.default子句为可选</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package switchdemo;</span><br><span class="line">/**</span><br><span class="line"> * 随机生成一个字母，并且判断该字母的类型</span><br><span class="line"> * </span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int n = (int)(26*Math.random());//产生一个[0,25)的随机数</span><br><span class="line">		char flg = (char)(97+n);//产生一个字母</span><br><span class="line">		</span><br><span class="line">		switch (flg) &#123;</span><br><span class="line">		case &apos;a&apos;:</span><br><span class="line">		case &apos;e&apos;:</span><br><span class="line">		case &apos;i&apos;:</span><br><span class="line">		case &apos;o&apos;:</span><br><span class="line">		case &apos;u&apos;:</span><br><span class="line">			System.out.println(&quot;产生了一个元音字母&quot;+flg);</span><br><span class="line">			break;</span><br><span class="line">		case &apos;w&apos;:</span><br><span class="line">		case &apos;y&apos;:</span><br><span class="line">			System.out.println(&quot;产生了一个半元音字母&quot;+flg);</span><br><span class="line">			break;</span><br><span class="line">		default:</span><br><span class="line">			System.out.println(&quot;产生了一个辅音字母&quot;+flg);</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="do-while"><a href="#do-while" class="headerlink" title="do-while:"></a>do-while:</h2><p>先执行，后判断。</p>
+<p>while:</p>
+<p>先判断，后执行。</p>
+<p><strong>While和dowhile的区别：</strong></p>
+<p>Dowhile总是保证循环体会被至少执行一次！这是他们的主要差别</p>
+<p>图示：<br><img src="/2019/04/20/java笔记3/d5.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">package Test;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 从键盘输入某个十进制小数，转换成对应的二进制小数并输出。</span><br><span class="line"> * @author Administrator</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">public class D2Bpoint &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入一个十进制的小数：&quot;);</span><br><span class="line">		double d = input.nextDouble();</span><br><span class="line">		double  mul = d;</span><br><span class="line">		StringBuffer buffer = new StringBuffer(&quot;0&quot;);</span><br><span class="line">		int count = 0;</span><br><span class="line">		do&#123;</span><br><span class="line">			double result = mul*2;</span><br><span class="line">			int i = (int)result;</span><br><span class="line">			buffer.append(i);</span><br><span class="line">			count++;</span><br><span class="line">			if(count == 7)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			mul = result - i;</span><br><span class="line">		&#125;while(mul != 0);</span><br><span class="line">		System.out.println(d+ &quot;转化成二进制小数位：&quot;+buffer);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">---------</span><br><span class="line">package Test;</span><br><span class="line">/**</span><br><span class="line"> * 6.从键盘输入某个十进制整数数，转换成对应的二进制整数并输出。</span><br><span class="line"> * @author Administrator</span><br><span class="line"> *用2整除十进制整数，可以得到一个商和余数；再用2去除商，</span><br><span class="line"> *又会得到一个商和余数，如此进行，直到商为小于1时为止，</span><br><span class="line"> *然后把先得到的余数作为二进制数的低位有效位，</span><br><span class="line"> *后得到的余数作为二进制数的高位有效位，依次排列起来。</span><br><span class="line"> */</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"> </span><br><span class="line">public class Test10to2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入一个十进制的整数：&quot;);</span><br><span class="line">        int num = input.nextInt();</span><br><span class="line">        int num2 = num;</span><br><span class="line">        String str = &quot;&quot;;</span><br><span class="line">        do&#123;</span><br><span class="line">            int div = num/2 ;</span><br><span class="line">            int mod = num%2 ;</span><br><span class="line">            str = mod + str;</span><br><span class="line">            num = div;</span><br><span class="line">        &#125;while(num != 0);</span><br><span class="line">        System.out.println(num2+&quot;转换成二进制为：&quot;+str);</span><br><span class="line">       </span><br><span class="line">       </span><br><span class="line">       </span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>for循环</strong>   </p>
+<p>•for循环语句是支持迭代的一种通用结构，是最有效、最灵活的循环结构</p>
+<p>•语法形式</p>
+<p>• for (初始表达式;布尔表达式;步进) {</p>
+<p>–循环体；</p>
+<p>•}</p>
+<p>•注意事项</p>
+<p>–for循环在执行条件测试后，先执行程序部分，再执行步进。</p>
+<p>–在for语句的初始化部分声明的变量，其作用域为整个for循环体</p>
+<p>–“初始化”和“循环条件表达式”部分可以使用逗号来执行多个操作</p>
+<p>–如果三个部分都为空语句（分号不能省），相当于一个无限循环</p>
+<p><strong>跳转语句—break和continue</strong>    </p>
+<p>•在任何循环语句的主体部分，均可用break控制循环的流程。break用于强行退出循环，不执行循环中剩余的语句。(break语句还可用于多支语句switch中)</p>
+<p>•continue 语句用在循环语句体中，用于终止某次循环过程，即跳过循环体中尚未执行的语句，接着进行下一次是否执行循环的判定。</p>
+<p><strong>跳转语句 —return</strong></p>
+<p>return语句从当前方法退出，返回到调用该方法的语句处，并从该语句的下条语句处继续执行程序。</p>
+<p>返回语句的两种格式（具体到方法时详细讲解）</p>
+<p>1、return expression</p>
+<p>返回一个值给调用该方法的语句。</p>
+<p>返回值的数据类型必须和方法声明中的返回值类型一致或是精度低于声明的数据类型。</p>
+<p>2、return</p>
+<p>当方法声明中用void声明返回类型为空时，应使用这种返回类型，它不返回任何值。</p>
+<p>•break –switch语句–循环语句</p>
+<p> •continue  –循环语句</p>
+<p>•return–任何语句中，结束当前方法，和循环其实没有什么关系</p>
+<p>•Continue 只能用于循环中  while do-while 执行了continue 以后 代码回到执行判断的地方,重新判断是否决定下一次执行</p>
+<p>•在for循环中执行continue 直接跳到i++迭代处</p>
+<p><strong>多重循环（循环嵌套）</strong></p>
+<p>一个循环体内又包含另一个完整的循环结构 </p>
+<p>任何两种循环都可以相互嵌套</p>
+<p>可以任意层次循环，但是一般不超过3层</p>
+<p>多重循环执行过程</p>
+<p>外层循环变量变化一次，内层循环变量要变化一遍</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">package duochongxunhuan;</span><br><span class="line">import java.awt.Choice;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 有5家衣服专卖店，每家最多购买3件。用户可以选择离开，可以买衣服。最后打印总共买了几件衣服</span><br><span class="line">  思路</span><br><span class="line">  外层循环控制去每个专卖店</span><br><span class="line">  内层循环控制买衣服过程</span><br><span class="line">  使用break退出内层循环</span><br><span class="line">- @author Administrator</span><br><span class="line">  *</span><br><span class="line">  */</span><br><span class="line">  public class BreakDemo &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">  Scanner input = new Scanner(System.in);</span><br><span class="line">  int count = 0;</span><br><span class="line">  for (int i = 1;i &lt; 5; i++)&#123;</span><br><span class="line">  System.out.println(&quot;欢迎光临第&quot;+ i +&quot;家专卖店&quot;);</span><br><span class="line">  for(int j = 0;j &lt; 3;j++ )&#123;</span><br><span class="line">  System.out.print(&quot;要离开吗？（y/n)?&quot;);</span><br><span class="line">  String choice  = input.nextLine();</span><br><span class="line">  if(&quot;y&quot;.equals(choice))&#123;</span><br><span class="line">  break;</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(&quot;买了一件衣服&quot;);</span><br><span class="line">  count++;</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(&quot;离店结账&quot;);</span><br><span class="line">  System.out.println(&quot; &quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(&quot;总共买了&quot;+count+&quot;件衣服&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+	
+
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Maybe I can
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sj13579.github.io/2019/04/20/java笔记3/" title="java 笔记3">https://sj13579.github.io/2019/04/20/java笔记3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/oracle入门到删库01/" rel="prev" title="oracle入门到删库01">
+                oracle入门到删库01 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/QQ1.jpg" alt="Maybe I can">
+            
+              <p class="site-author-name" itemprop="name">Maybe I can</p>
+              <p class="site-description motion-element" itemprop="description">人的眼睛有5.76亿像素,但却终究看不懂人心.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/3695610095" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/ai-mei-69-21" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。"><span class="nav-number">1.</span> <span class="nav-text">流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-双分支选择结构"><span class="nav-number">2.</span> <span class="nav-text">if-else**双分支选择结构**</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#If-else-if-else-多分支选择结构"><span class="nav-number">2.1.</span> <span class="nav-text">If-else if-else**多分支选择结构**</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while-循环"><span class="nav-number">3.</span> <span class="nav-text">while**循环**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch-多分支选择结构"><span class="nav-number">5.</span> <span class="nav-text">switch**多分支选择结构**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#do-while"><span class="nav-number">6.</span> <span class="nav-text">do-while:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maybe I can</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">10.3k</span>
+  
+</div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">QQ空间 &mdash; <a class="theme-link" target="_blank" href="https://user.qzone.qq.com/1043342549/main">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共10.3k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://评论.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sj13579.github.io/2019/04/20/java笔记3/';
+          this.page.identifier = '2019/04/20/java笔记3/';
+          this.page.title = 'java 笔记3';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://评论.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '7iCLIQ6ttDxyMjAKSz2HYGpO-gzGzoHsz',
+        appKey: 'IgEfM73Jl1fBmP8LcBTn5HkN',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<!-- ҳ����С���� -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
+
+
+

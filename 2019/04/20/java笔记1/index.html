@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="java,">
 
 
 
@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="也许我可以">
-<meta property="og:url" content="https://sj13579.github.io/archives/2019/04/index.html">
+<meta name="description" content="数据类型和运算符                    标识符常作用     常量、变量、方法、类和包等的名称 命名规则 必须以字母、_下划线、美元符$开头。 其它部分可以是字母、下划线“_”、美元符“$”和数字的任意组合 大小写敏感，长度无限制。 不可以是Java的关键字。 注意 Java不采用通常语言使用的ASCII字符集 Java采用u">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java 笔记">
+<meta property="og:url" content="https://sj13579.github.io/2019/04/20/java笔记1/index.html">
 <meta property="og:site_name" content="也许我可以">
-<meta property="og:description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
+<meta property="og:description" content="数据类型和运算符                    标识符常作用     常量、变量、方法、类和包等的名称 命名规则 必须以字母、_下划线、美元符$开头。 其它部分可以是字母、下划线“_”、美元符“$”和数字的任意组合 大小写敏感，长度无限制。 不可以是Java的关键字。 注意 Java不采用通常语言使用的ASCII字符集 Java采用u">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-22T12:57:00.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="也许我可以">
-<meta name="twitter:description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
+<meta name="twitter:title" content="java 笔记">
+<meta name="twitter:description" content="数据类型和运算符                    标识符常作用     常量、变量、方法、类和包等的名称 命名规则 必须以字母、_下划线、美元符$开头。 其它部分可以是字母、下划线“_”、美元符“$”和数字的任意组合 大小写敏感，长度无限制。 不可以是Java的关键字。 注意 Java不采用通常语言使用的ASCII字符集 Java采用u">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://sj13579.github.io/archives/2019/04/">
+  <link rel="canonical" href="https://sj13579.github.io/2019/04/20/java笔记1/">
 
 
 
 
 
-  <title>归档 | 也许我可以</title>
+  <title>java 笔记 | 也许我可以</title>
   
 
 
@@ -150,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://sj13579.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,247 +278,343 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/20/java笔记1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maybe I can">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/QQ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="也许我可以">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">java 笔记</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T20:39:51+08:00">
+                2019-04-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-22T20:57:00+08:00">
+                2019-04-22
+              </time>
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/20/java笔记1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/20/java笔记1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/23/java笔记4/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">java 笔记4</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-23T21:00:05+08:00" content="2019-04-23">
-          04-23
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/22/java笔记2/" itemprop="url">
-              
-                <span itemprop="name">java 笔记2</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-22T20:40:31+08:00" content="2019-04-22">
-          04-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/20/图片测试/" itemprop="url">
-              
-                <span itemprop="name">记录生活的点点滴滴</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-20T22:47:55+08:00" content="2019-04-20">
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="数据类型和运算符"><a href="#数据类型和运算符" class="headerlink" title="                            数据类型和运算符                    "></a><strong>                            数据类型和运算符                    </strong></h1><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a><strong>标识符</strong></h3><p>常作用    </p>
+<p>常量、变量、方法、类和包等的名称</p>
+<p>命名规则</p>
+<p>必须以字母、_下划线、美元符$开头。</p>
+<p>其它部分可以是字母、下划线“_”、美元符“$”和数字的任意组合</p>
+<p>大小写敏感，长度无限制。</p>
+<p>不可以是Java的关键字。</p>
+<p>注意</p>
+<p>Java不采用通常语言使用的ASCII字符集</p>
+<p>Java采用unicode这样的标准的国际字符集。因此，这里的字母的含义：英文、汉字等等。(不建议大家使用汉字来定义标识符！）</p>
+<a id="more"></a>
+<h3 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h3><p>常量变量定义</p>
+<p>在程序中存在大量的数据来代表程序的状态，其中有些数据在程序的运行过程中值会发生改变，有些数据在程序运行过程中值不能发生改变，这些数据在程序中分别被叫做变量和常量。</p>
+<p>变量举例：</p>
+<p>在2D游戏程序中，<strong>需要代表人物的位置</strong>，则需要2个变量，一个是x坐标，一个是y坐标，在程序运行过程中，这两个变量的值会发生改变</p>
+<p>常量举例</p>
+<p>代表常数，便于程序的修改（例如：圆周率的值）</p>
+<p>增强程序的可读性（例如：常量UP、DOWN、LEFT和RIGHT分辨代表上下左右，其数值分别是1、2、3和4）</p>
+<p>在实际的程序中，可以根据数据在程序运行中是否发生改变，来选择应该是使用变量代表还是常量代表</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>byte</strong>：Java中最小的数据类型，在内存中占8位(bit)，即1个字节，取值范围-128~127，默认值0</p>
+<p><strong>short</strong>：短整型，在内存中占16位，即2个字节，取值范围-32768~32717，默认值0</p>
+<p><strong>int</strong>：整型，用于存储整数，在内在中占32位，即4个字节，取值范围-2147483648~2147483647，默认值0</p>
+<p><strong>long</strong>：长整型，在内存中占64位，即8个字节-2^63~2^63-1，默认值0L</p>
+<p><strong>float</strong>：浮点型，在内存中占32位，即4个字节，用于存储带小数点的数字（与double的区别在于float类型有效小数点只有6~7位），默认值0</p>
+<p><strong>double</strong>：双精度浮点型，用于存储带有小数点的数字，在内存中占64位，即8个字节，默认值0</p>
+<p><strong>char</strong>：字符型，用于存储单个字符，占16位，即2个字节，取值范围0~65535，默认值为空</p>
+<p><strong>boolean</strong>：布尔类型，占1个字节，用于判断真或假（仅有两个值，即true、false），默认值false</p>
+<h3 id="浮点型变量："><a href="#浮点型变量：" class="headerlink" title="浮点型变量："></a>浮点型变量：</h3><p>float类型：单精度类型，尾数可以精确到7位有效数字，在很多情况下，float类型的精度很难满足需求。</p>
+<p>double类型：双精度类型  精度是float类型的两倍，尾数可以精确到16位有效数字，绝大部分应用程序都采用double类型。</p>
+<p>注意</p>
+<p>浮点常量默认为double。要变为float，需在后面增加F/f.  如： 3.14F</p>
+<p>浮点数存在舍入误差，很多数字不能精确表示。如果需要进行不产生舍入误差的精确数字计算，需要使用BigDecimal类。</p>
+<p><strong>算术</strong></p>
+<p>单目：~（按位取反）、! (取非)、-（负号运算符）、 ++（自增）、 - -（自减）、</p>
+<p>双目：+ - * / %（取余）</p>
+<p>三目：a&gt;b?true:false 说明：当a大于b的时候，为true（也就是冒号之前的值），否则为false；这整个运算符包括一个关系运算符（可以是“&gt;””&lt;””!=”等等），一个“？”，一个“：”，冒号前后需要有两个或者是值或者是对象。</p>
+<p><strong>关系</strong></p>
+<p>等于符号<strong>:</strong>==，不等于符号<strong>:</strong>!= ，大于符号<strong>:</strong>&gt;， 小于符号<strong>:</strong>&lt;，大于等于符号 :&gt;= ，小于等于符号<strong>:</strong>&lt;= 。</p>
+<p>*<em>位与逻辑</em></p>
+<p><strong>位运算符</strong>　与（&amp;）、非（~）、或（|）、异或（^）</p>
+<p>&amp;：双目运算符，运算时均把运算数转换为二进制再做比较，规则：当相同的位上均为1时结果为1，否则结 果为0.如：1010&amp;1101，转为二进制：1111110010&amp;10001001101，比较结果为：1000000转为十进制： 64。所以1010&amp;1101=64；</p>
+<p>| ：当两边操作数的位有一边为1时，结果为1，否则为0。如1100|1010=1110</p>
+<p>~：0变1,1变0</p>
+<p>^：两边的位不同时，结果为1，否则为0.如1100^1010=0110</p>
+<p><strong>逻辑运算符</strong></p>
+<p>与（&amp;&amp;）、非（!）、或（||）</p>
+<p><strong>赋值</strong></p>
+<p>= += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;=</p>
+<h3 id="基本数据类型的类型转换"><a href="#基本数据类型的类型转换" class="headerlink" title="基本数据类型的类型转换"></a>基本数据类型的类型转换</h3><ul>
+<li><p>在赋值运算或算术运算时，要求数据类型相同，否则要进行类型转换</p>
+</li>
+<li><p>转换方式：</p>
+</li>
+<li>自动转换</li>
+<li><p>强制转换</p>
+</li>
+<li><p>除boolean类型外，所有的基本数据类型因为各自的精度不同，赋值时都要考虑这个问题</p>
+</li>
+<li>除boolean类型外，所有的基本数据类型包括：整型，浮点型，字符型。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">package 类型转换;</span><br><span class="line">/**</span><br><span class="line"> * 基本数据类型的类型转换</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> *	类型转换分为两种情况</span><br><span class="line"> *	一，自动类型转换</span><br><span class="line"> *		1，低精度 向高精度转换</span><br><span class="line"> *		2，低位向高位转换</span><br><span class="line"> *	二，强制类型转换</span><br><span class="line"> *		1，高精度向低精度转换</span><br><span class="line"> *			可能会损失精度</span><br><span class="line"> *		2，高位向低位转换</span><br><span class="line"> *			可能会损失大小</span><br><span class="line"> *		</span><br><span class="line"> */</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int  a = 10;</span><br><span class="line">		float f = 1.23f;</span><br><span class="line">		f = a;</span><br><span class="line">		long lo = 123L;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		//__________________________</span><br><span class="line">		</span><br><span class="line">		int b = 270;</span><br><span class="line">		byte bt = (byte)b;</span><br><span class="line">		System.out.println(bt);</span><br><span class="line">		//00000001 00001110</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		f = 3.14f;</span><br><span class="line">		int c =  (int)f;</span><br><span class="line">		System.out.println(c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">package test;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 练习3:商场推出幸运抽奖活动 根据抽奖规则计算会员卡号各位数字之和为16,则为幸运会员</span><br><span class="line"> * @author tang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Test03 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner input = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入四位数的会员卡卡号&quot;);</span><br><span class="line">		//接收到用户输入的卡号</span><br><span class="line">		int cardNo = input.nextInt();</span><br><span class="line">		//求出卡号千位上的数字</span><br><span class="line">		int k  = cardNo/1000;</span><br><span class="line">		//求出卡号百位上的数字</span><br><span class="line">		int b = (cardNo%1000)/100;</span><br><span class="line">		//求出卡号十位上的数字</span><br><span class="line">		int s = (cardNo%100)/10;</span><br><span class="line">		//求出卡号个位上的数字</span><br><span class="line">		int g = cardNo%10;</span><br><span class="line">//		求和</span><br><span class="line">		int sum = k + b + s + g;</span><br><span class="line">		String message = (sum == 16)?&quot;恭喜你，中奖了！&quot;:&quot;很遗憾，本次没有中奖&quot;;</span><br><span class="line">		System.out.println(message);</span><br></pre></td></tr></table></figure>
+<p>​    </p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/20/java笔记1/" itemprop="url">
-              
-                <span itemprop="name">java 笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-20T20:39:51+08:00" content="2019-04-20">
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/20/oracle入门到删库01/" itemprop="url">
-              
-                <span itemprop="name">oracle入门到删库01</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-20T12:39:22+08:00" content="2019-04-20">
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/20/java笔记3/" itemprop="url">
-              
-                <span itemprop="name">java 笔记3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-20T00:00:00+08:00" content="2019-04-20">
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+	
+
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Maybe I can
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sj13579.github.io/2019/04/20/java笔记1/" title="java 笔记">https://sj13579.github.io/2019/04/20/java笔记1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/20/oracle入门到删库01/" rel="next" title="oracle入门到删库01">
+                <i class="fa fa-chevron-left"></i> oracle入门到删库01
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/图片测试/" rel="prev" title="记录生活的点点滴滴">
+                记录生活的点点滴滴 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -524,6 +622,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -544,8 +656,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -653,6 +774,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型和运算符"><span class="nav-number">1.</span> <span class="nav-text">                            数据类型和运算符                    </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">1.0.1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量和变量"><span class="nav-number">1.0.2.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">1.0.3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点型变量："><span class="nav-number">1.0.4.</span> <span class="nav-text">浮点型变量：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型的类型转换"><span class="nav-number">1.0.5.</span> <span class="nav-text">基本数据类型的类型转换</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -814,6 +951,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -831,6 +972,18 @@
       <script id="dsq-count-scr" src="https://评论.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sj13579.github.io/2019/04/20/java笔记1/';
+          this.page.identifier = '2019/04/20/java笔记1/';
+          this.page.title = 'java 笔记';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://评论.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
