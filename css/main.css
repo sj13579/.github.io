@@ -1890,7 +1890,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #24ffff;
+  background: #494f7d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3065,7 +3065,7 @@ pre .javascript .function {
   cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
 }
 .post {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 60px;
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
