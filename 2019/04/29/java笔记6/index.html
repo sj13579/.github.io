@@ -89,15 +89,17 @@
 <meta name="description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java笔记6">
+<meta property="og:title" content="java 笔记6">
 <meta property="og:url" content="https://sj13579.github.io/2019/04/29/java笔记6/index.html">
 <meta property="og:site_name" content="也许我可以">
 <meta property="og:description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-29T11:43:12.394Z">
+<meta property="og:image" content="https://sj13579.github.io/2019/04/29/java笔记6/QQ1.jpg">
+<meta property="og:updated_time" content="2019-04-29T11:50:59.269Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java笔记6">
+<meta name="twitter:title" content="java 笔记6">
 <meta name="twitter:description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
+<meta name="twitter:image" content="https://sj13579.github.io/2019/04/29/java笔记6/QQ1.jpg">
 
 
 
@@ -133,7 +135,7 @@
 
 
 
-  <title>java笔记6 | 也许我可以</title>
+  <title>java 笔记6 | 也许我可以</title>
   
 
 
@@ -309,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java笔记6</h1>
+          <h1 class="post-title" itemprop="name headline">java 笔记6</h1>
         
 
         <div class="post-meta">
@@ -337,7 +339,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-29T19:43:12+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-29T19:50:59+08:00">
                 2019-04-29
               </time>
             
@@ -413,7 +415,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  6
                 </span>
               
             </div>
@@ -449,11 +451,7 @@
 </blockquote>
 <p>子类可以继承父类的所有资源吗？</p>
 <p>不能，不能被继承的父类成员有  1、private成员  2、子类和父类不再同包，使用默认访问权限的成员    3、构造方法</p>
-<p>​                  本类                    同包        子类           所有类</p>
-<p>public               √                       √               √                   √            </p>
-<p>Protected         √                       √               √                   ×            </p>
-<p>默认                 √                        √               ×                  ×            </p>
-<p>Private          √                        ×              ×                  ×    </p>
+<p><img src="/2019/04/29/java笔记6/QQ1.jpg" alt></p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package finaldemo;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 1,用final来修饰一个变量， 则该变量就变成了一个常量</span><br><span class="line">- 2,用final来修饰一个类，则该类就不能被作为父类继承</span><br><span class="line">- 3,用final来修饰一个方法，则该方法就不能被重写</span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">   */</span><br><span class="line">  public class Test &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">  	final int AGE;</span><br><span class="line">  	AGE = 10;</span><br><span class="line">  	</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="方法的重写（override）"><a href="#方法的重写（override）" class="headerlink" title="方法的重写（override）"></a>方法的重写（override）</h2><p>在子类中可以根据需要对从基类中继承来的方法进行重写。</p>
@@ -483,15 +481,15 @@
 <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p><strong>定义：</strong>是一种模版模式。抽象类为所有子类提供了一个通用模版，子类可以在这个模版基础上进行扩展。</p>
 <p><strong>作用：</strong> 通过抽象类，可以避免子类设计的随意性。通过抽象类，我们就可以做到严格限制子类的设计，使子类之间更加通用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">package 抽象类;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- class 前加abstract 该类就成为了一个抽象类</span><br><span class="line"></span><br><span class="line">- 1，抽象类不能创建对象</span><br><span class="line"></span><br><span class="line">- 2，抽象类一般是一个父类，该父类没有什么存在的意义，就是用来被子类继承 </span><br><span class="line"></span><br><span class="line">- 3，抽象类中可以有抽象方法，也可以有非抽象方法</span><br><span class="line"></span><br><span class="line">- 4，一个类继承了一个抽象类，则该类必须要实现该抽象类中的所有抽象方法</span><br><span class="line"></span><br><span class="line">- 5，如果子类也是抽象类，则可以不实现父类的抽象方法</span><br><span class="line"></span><br><span class="line">- 6，抽象方法必须定义在抽象类中</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- 为什么要使用抽象类</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">   */</span><br><span class="line">  public abstract class Pet &#123;</span><br><span class="line">  private String name;</span><br><span class="line">  //抽象方法</span><br><span class="line">  //如果一个方法 每个子类实现的逻辑都不一样   则把该方法定义成抽象方法，</span><br><span class="line">  //让每个子类去根据自己的逻辑实现该方法</span><br><span class="line">  public abstract void bark();</span><br><span class="line">  public abstract void eat();</span><br><span class="line">  public abstract void sleep();</span><br><span class="line">  public abstract void play();</span><br><span class="line"></span><br><span class="line">  //如果一个方法，每个子类实现的逻辑都一样  则该方法直接在父类中实现，子类直接调用</span><br><span class="line">  public String getName() &#123;</span><br><span class="line">  	return name;</span><br><span class="line">  &#125;</span><br><span class="line">  public void setName(String name) &#123;</span><br><span class="line">  	this.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package 抽象类;</span><br><span class="line"></span><br><span class="line">public class Dog extends Pet&#123;</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-<p>@Override<br>public void bark() {<br>    System.out.println(“won won won…”);<br>}</p>
-<p>@Override<br>public void eat() {<br>    System.out.println(“狗喜欢吃骨头”);<br>}</p>
-<p>@Override<br>public void sleep() {<br>    System.out.println(“狗在睡觉。。。”);<br>}</p>
-<p>@Override<br>public void play() {<br>    System.out.println(“狗在玩飞盘。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">package 抽象类;</span><br><span class="line"></span><br><span class="line">public class Cat extends Pet&#123;</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
-<p>@Override<br>public void bark() {<br>    System.out.println(“maio miao …”);<br>}</p>
-<p>@Override<br>public void eat() {<br>    System.out.println(“猫在吃鱼。。。”);</p>
+<p>public void bark() {<br>    System.out.println(“won won won…”);<br>}</p>
+<p>public void eat() {<br>    System.out.println(“狗喜欢吃骨头”);<br>}</p>
+<p>public void sleep() {<br>    System.out.println(“狗在睡觉。。。”);<br>}</p>
+<p>public void play() {<br>    System.out.println(“狗在玩飞盘。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">package 抽象类;</span><br><span class="line"></span><br><span class="line">public class Cat extends Pet&#123;</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<p>public void bark() {<br>    System.out.println(“maio miao …”);<br>}</p>
+<p>public void eat() {<br>    System.out.println(“猫在吃鱼。。。”);</p>
 <p>}</p>
-<p>@Override<br>public void sleep() {<br>    System.out.println(“猫在晒太阳。。。”);<br>}</p>
-<p>@Override<br>public void play() {<br>    System.out.println(“猫在玩老鼠。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>public void sleep() {<br>    System.out.println(“猫在晒太阳。。。”);<br>}</p>
+<p>public void play() {<br>    System.out.println(“猫在玩老鼠。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>总结：</strong></p>
 <ol>
 <li>抽象方法和抽象类均必须用abstract来修饰。</li>
@@ -553,7 +551,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sj13579.github.io/2019/04/29/java笔记6/" title="java笔记6">https://sj13579.github.io/2019/04/29/java笔记6/</a>
+    <a href="https://sj13579.github.io/2019/04/29/java笔记6/" title="java 笔记6">https://sj13579.github.io/2019/04/29/java笔记6/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -840,7 +838,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15k</span>
+    <span title="Site words total count">14.9k</span>
   
 </div>
 <div class="powered-by">
@@ -866,7 +864,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15k字</span>
+  <span class="post-count">博客全站共14.9k字</span>
 </div>
 
         
@@ -998,7 +996,7 @@ var jiathis_config={
         var disqus_config = function () {
           this.page.url = 'https://sj13579.github.io/2019/04/29/java笔记6/';
           this.page.identifier = '2019/04/29/java笔记6/';
-          this.page.title = 'java笔记6';
+          this.page.title = 'java 笔记6';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://评论.disqus.com/embed.js';
