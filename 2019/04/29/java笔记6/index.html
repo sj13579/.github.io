@@ -86,22 +86,18 @@
 
 
 
-<meta name="description" content="面向对象区别： 面向过程：事物比较简单，可以用线性的思维去解决 面向对象：事物比较复杂，使用简单的线性思维无法解决 共同点： 面向过程和面向对象都是解决实际问题的一种思维方式 二者相辅相成，通过面向对象方式方便于我们从宏观上把握事物之间复杂的关系，方便我们分析整个系统，具体到微观操作，仍然使用面向过程方式来处理。 类可以生成对象 类是对象的抽象 对象：是具体的事物 类：是对对象的抽象（抽象 抽出像">
+<meta name="description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java 笔记5">
-<meta property="og:url" content="https://sj13579.github.io/2019/04/26/java笔记5/index.html">
+<meta property="og:title" content="java笔记6">
+<meta property="og:url" content="https://sj13579.github.io/2019/04/29/java笔记6/index.html">
 <meta property="og:site_name" content="也许我可以">
-<meta property="og:description" content="面向对象区别： 面向过程：事物比较简单，可以用线性的思维去解决 面向对象：事物比较复杂，使用简单的线性思维无法解决 共同点： 面向过程和面向对象都是解决实际问题的一种思维方式 二者相辅相成，通过面向对象方式方便于我们从宏观上把握事物之间复杂的关系，方便我们分析整个系统，具体到微观操作，仍然使用面向过程方式来处理。 类可以生成对象 类是对象的抽象 对象：是具体的事物 类：是对对象的抽象（抽象 抽出像">
+<meta property="og:description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://sj13579.github.io/2019/04/26/java笔记5/QW.jpg">
-<meta property="og:image" content="https://sj13579.github.io/2019/04/26/java笔记5/QW2.jpg">
-<meta property="og:image" content="https://sj13579.github.io/2019/04/26/java笔记5/QW3.jpg">
-<meta property="og:updated_time" content="2019-04-26T13:04:41.663Z">
+<meta property="og:updated_time" content="2019-04-29T11:43:12.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java 笔记5">
-<meta name="twitter:description" content="面向对象区别： 面向过程：事物比较简单，可以用线性的思维去解决 面向对象：事物比较复杂，使用简单的线性思维无法解决 共同点： 面向过程和面向对象都是解决实际问题的一种思维方式 二者相辅相成，通过面向对象方式方便于我们从宏观上把握事物之间复杂的关系，方便我们分析整个系统，具体到微观操作，仍然使用面向过程方式来处理。 类可以生成对象 类是对象的抽象 对象：是具体的事物 类：是对对象的抽象（抽象 抽出像">
-<meta name="twitter:image" content="https://sj13579.github.io/2019/04/26/java笔记5/QW.jpg">
+<meta name="twitter:title" content="java笔记6">
+<meta name="twitter:description" content="继承 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。 提高代码的复用性！ extends的意思是“扩展”。子类是父类的扩展 父类：超类、基类、 子类：派生类  小结： 继承的作用：通过继承可以简化类的定义，实现代码的重用 子类继承父类的成员变量和成员方法，但不继承父类的构造方法 –java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统">
 
 
 
@@ -131,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://sj13579.github.io/2019/04/26/java笔记5/">
+  <link rel="canonical" href="https://sj13579.github.io/2019/04/29/java笔记6/">
 
 
 
 
 
-  <title>java 笔记5 | 也许我可以</title>
+  <title>java笔记6 | 也许我可以</title>
   
 
 
@@ -296,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/26/java笔记5/">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/29/java笔记6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Maybe I can">
@@ -313,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java 笔记5</h1>
+          <h1 class="post-title" itemprop="name headline">java笔记6</h1>
         
 
         <div class="post-meta">
@@ -325,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-26T21:04:05+08:00">
-                2019-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-29T19:24:37+08:00">
+                2019-04-29
               </time>
             
 
@@ -341,8 +337,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-26T21:04:41+08:00">
-                2019-04-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-29T19:43:12+08:00">
+                2019-04-29
               </time>
             
           </span>
@@ -378,8 +374,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/26/java笔记5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/26/java笔记5/" itemprop="commentCount"></span>
+                <a href="/2019/04/29/java笔记6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/29/java笔记6/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.8k
+                  1.9k
                 </span>
               
 
@@ -417,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  7
                 </span>
               
             </div>
@@ -438,181 +434,93 @@
       
 
       
-        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><p><strong>区别：</strong></p>
-<p>面向过程：事物比较简单，可以用线性的思维去解决</p>
-<p>面向对象：事物比较复杂，使用简单的线性思维无法解决</p>
-<p>共同点：</p>
-<p>面向过程和面向对象都是解决实际问题的一种思维方式</p>
-<p>二者相辅相成，通过面向对象方式方便于我们从宏观上把握事物之间复杂的关系，方便我们分析整个系统，具体到微观操作，仍然使用面向过程方式来处理。</p>
-<p>类可以生成对象 类是对象的抽象</p>
-<p>对象：是具体的事物</p>
-<p>类：是对对象的抽象（抽象 抽出像的部分）</p>
-<p>先有具体对象，然后抽象各个对象象的部分，归纳出类通过类在认识其他对象</p>
-<p>1、静态的描述声明为类的成员变量 成员变量描述对象有什么</p>
-<p>2、动态的描述声明为成员方法 成员方法描述对象可以做什么</p>
-<p>3、成员方法可以直接使用成员变量</p>
+        <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p> 类是对对象的抽象，继承是对某一批类的抽象，从而实现对现实世界更好的建模。</p>
+<p>提高代码的复用性！</p>
+<p>extends的意思是“扩展”。子类是父类的扩展</p>
+<p>父类：超类、基类、 子类：派生类</p>
+<p> <strong>小结：</strong></p>
+<p>继承的作用：通过继承可以简化类的定义，实现代码的重用</p>
+<p>子类继承父类的成员变量和成员方法，但不继承父类的构造方法</p>
+<p>–java中只有单继承 ，没有像c++那样的多继承。多继承会引起混乱，使得继承链过于复杂，系统难于维护。就像我们现实中，如果你有多个父母亲，那是一个多么混乱的世界啊。多继承，就是为了实现代码的复用性，却引入了复杂性，使得系统类之间的关系混乱。</p>
+<p>–java中的多继承，可以通过接口来实现</p>
+<p>–如果定义一个类时，没有调用extends，则它的父类是：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; java.lang.Objec</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>子类可以继承父类的所有资源吗？</p>
+<p>不能，不能被继承的父类成员有  1、private成员  2、子类和父类不再同包，使用默认访问权限的成员    3、构造方法</p>
+<p>​                  本类                    同包        子类           所有类</p>
+<p>public               √                       √               √                   √            </p>
+<p>Protected         √                       √               √                   ×            </p>
+<p>默认                 √                        √               ×                  ×            </p>
+<p>Private          √                        ×              ×                  ×    </p>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">//静态的特征描述为类的成员变量 成员变量描述对象有什么</span><br><span class="line">//在这里声明类的成员变量</span><br><span class="line">//类的里面 方法的外面</span><br><span class="line">String name;</span><br><span class="line">int age;</span><br><span class="line">String gender;</span><br><span class="line">//动态的特征描述为类的成员方法 成员方法描述对象可以做什么</span><br><span class="line">public void eat() &#123;</span><br><span class="line">//成员方法可以直接使用成员变量</span><br><span class="line">System.out.println(name + &quot;在吃饭&quot;);</span><br><span class="line">&#125;</span><br><span class="line">public void sleep() &#123;</span><br><span class="line">System.out.print(name + &quot;在睡觉&quot;);</span><br><span class="line">&#125;public void coding() &#123;</span><br><span class="line">System.out.print(name + &quot;在敲代码&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>类：class</p>
-<p>对象：object instance(实例）某个类的对象 &lt;==&gt; 某个类的实例</p>
-<p>定义类（类的组成）</p>
-<p>属性 field</p>
-<p>方法 method</p>
-<p>构造方法 construtor</p>
-<p>其他：代码块 静态代码块 内部类</p>
-<h2 id="类的属性："><a href="#类的属性：" class="headerlink" title="类的属性："></a>类的属性：</h2><p>在定义成员变量时可以对其初始化</p>
-<p>如果不对其初始化，Java使用默认的值对其初始化。</p>
-<p><img src="/2019/04/26/java笔记5/QW.jpg" alt></p>
-<p><strong>创建对象</strong></p>
-<p>类名 对象名 = new 类名();</p>
-<p>Person p1=new Person(); </p>
-<p><strong>调用类的属性和方法</strong></p>
-<p>对象名.成员变量</p>
-<p>对象名.成员方法</p>
-<p>属性   field，或者叫成员变量</p>
-<p>属性用于定义该类或该类对象包含的数据或者说静态属性。</p>
-<p>属性作用范围是整个类体</p>
-<h2 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h2><p><img src="/2019/04/26/java笔记5/QW2.jpg" alt></p>
-<h3 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h3><p>定义方法的参数是形式参数</p>
-<p>调用方法的参数是实在参数</p>
-<p>调用方法时要求参数个数相同，类型兼容</p>
-<p>参数传递</p>
-<p>基本数据类型的参数传递</p>
-<p>引用数据类型的参数传递</p>
-<p>类和类之间的通信</p>
-<p>通过创建对象，类和类就建立了联系，通过方法的调用来进行信息的传递</p>
-<h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>this的作用: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package finaldemo;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 1,用final来修饰一个变量， 则该变量就变成了一个常量</span><br><span class="line">- 2,用final来修饰一个类，则该类就不能被作为父类继承</span><br><span class="line">- 3,用final来修饰一个方法，则该方法就不能被重写</span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">   */</span><br><span class="line">  public class Test &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">  	final int AGE;</span><br><span class="line">  	AGE = 10;</span><br><span class="line">  	</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="方法的重写（override）"><a href="#方法的重写（override）" class="headerlink" title="方法的重写（override）"></a>方法的重写（override）</h2><p>在子类中可以根据需要对从基类中继承来的方法进行重写。</p>
+<p> 重写方法必须和被重写方法具有相同方法名称、参数列表和返回类型。</p>
+<p>重写方法不能使用比被重写方法更严格的访问权限。（由于多态）</p>
+<h3 id="为什么需要重写父类的方法"><a href="#为什么需要重写父类的方法" class="headerlink" title="为什么需要重写父类的方法?"></a>为什么需要重写父类的方法?</h3><p>父类实现的方法不符合子类的逻辑</p>
+<p>父类已经实现了80%,但是子类又必须要使用剩下的20%,所以可以重写父类方法,在方法内用super关键字调用父类的方法,再去完成剩下的20%工作</p>
+<h3 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h3><p>定义：super是直接父类对象的引用。</p>
+<p>用法：可以通过super来访问父类中被子类覆盖的方法或属性。</p>
+<p>普通方法：</p>
+<p>没有顺序限制。可以随便调用。</p>
+<p>构造函数中： </p>
+<p>任何类的构造函数中，若是构造函数的第一行代码没有显式的调用super(…);那么Java默认都会调用super();作为父类的初始化函数。 所以你这里的super();加不加都无所谓。</p>
+<h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3><p>定义：final可以用来修饰变量，方法，类。</p>
 <ol>
-<li>this表示的是当前对象本身，</li>
-<li>更准确地说，this代表当前对象的一个引用。</li>
+<li>修饰变量   变量一旦被初始化便不可改变 相当于定义了一个常量</li>
 </ol>
-<p>普通方法中使用this。</p>
+<p>​       2.修饰引用数据类型  引用不能被赋值 但属性可以被赋值</p>
+<p>​       3.修饰方法   final方法是在子类中不能被覆盖的方法</p>
+<p>​        4.修饰类  final类是无法被任何类继承的</p>
+<h3 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h3><p>object类是所有java类的根基</p>
+<p>如果在类的声明中未使用extends关键字指明其基类，则默认基类为object类</p>
+<h3 id="重写："><a href="#重写：" class="headerlink" title="重写："></a>重写：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toString</span><br></pre></td></tr></table></figure>
+<p>方法：</p>
+<p>默认返回：包名+类名+@+哈希码</p>
+<p>可以重写！</p>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p><strong>定义：</strong>是一种模版模式。抽象类为所有子类提供了一个通用模版，子类可以在这个模版基础上进行扩展。</p>
+<p><strong>作用：</strong> 通过抽象类，可以避免子类设计的随意性。通过抽象类，我们就可以做到严格限制子类的设计，使子类之间更加通用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">package 抽象类;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- class 前加abstract 该类就成为了一个抽象类</span><br><span class="line"></span><br><span class="line">- 1，抽象类不能创建对象</span><br><span class="line"></span><br><span class="line">- 2，抽象类一般是一个父类，该父类没有什么存在的意义，就是用来被子类继承 </span><br><span class="line"></span><br><span class="line">- 3，抽象类中可以有抽象方法，也可以有非抽象方法</span><br><span class="line"></span><br><span class="line">- 4，一个类继承了一个抽象类，则该类必须要实现该抽象类中的所有抽象方法</span><br><span class="line"></span><br><span class="line">- 5，如果子类也是抽象类，则可以不实现父类的抽象方法</span><br><span class="line"></span><br><span class="line">- 6，抽象方法必须定义在抽象类中</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- 为什么要使用抽象类</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">   */</span><br><span class="line">  public abstract class Pet &#123;</span><br><span class="line">  private String name;</span><br><span class="line">  //抽象方法</span><br><span class="line">  //如果一个方法 每个子类实现的逻辑都不一样   则把该方法定义成抽象方法，</span><br><span class="line">  //让每个子类去根据自己的逻辑实现该方法</span><br><span class="line">  public abstract void bark();</span><br><span class="line">  public abstract void eat();</span><br><span class="line">  public abstract void sleep();</span><br><span class="line">  public abstract void play();</span><br><span class="line"></span><br><span class="line">  //如果一个方法，每个子类实现的逻辑都一样  则该方法直接在父类中实现，子类直接调用</span><br><span class="line">  public String getName() &#123;</span><br><span class="line">  	return name;</span><br><span class="line">  &#125;</span><br><span class="line">  public void setName(String name) &#123;</span><br><span class="line">  	this.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package 抽象类;</span><br><span class="line"></span><br><span class="line">public class Dog extends Pet&#123;</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure>
+<p>@Override<br>public void bark() {<br>    System.out.println(“won won won…”);<br>}</p>
+<p>@Override<br>public void eat() {<br>    System.out.println(“狗喜欢吃骨头”);<br>}</p>
+<p>@Override<br>public void sleep() {<br>    System.out.println(“狗在睡觉。。。”);<br>}</p>
+<p>@Override<br>public void play() {<br>    System.out.println(“狗在玩飞盘。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">package 抽象类;</span><br><span class="line"></span><br><span class="line">public class Cat extends Pet&#123;</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<p>@Override<br>public void bark() {<br>    System.out.println(“maio miao …”);<br>}</p>
+<p>@Override<br>public void eat() {<br>    System.out.println(“猫在吃鱼。。。”);</p>
+<p>}</p>
+<p>@Override<br>public void sleep() {<br>    System.out.println(“猫在晒太阳。。。”);<br>}</p>
+<p>@Override<br>public void play() {<br>    System.out.println(“猫在玩老鼠。。。”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>总结：</strong></p>
+<ol>
+<li>抽象方法和抽象类均必须用abstract来修饰。</li>
+<li>抽象方法没有方法体，只需要声明不需实现。</li>
+<li>有抽象方法的类只能定义能抽象类</li>
+<li>相反抽象类里面的方法不一定全是抽象方法，也可能没有抽象方法。</li>
+<li>抽象类可以包含属性、方法、构造方法。</li>
+<li>抽象类不能实例化，及不能用new来实例化抽象类，只能用来被子类调用。 </li>
+<li>抽象类只能用来继承。</li>
+<li>抽象方法必须被子类实现。抽象类的子类必须覆盖所有的抽象方法才能被实例化，否则还是抽象类</li>
+</ol>
+<p><strong>构造方法调用顺序：</strong></p>
+<ol>
+<li>根据super的说明，构造方法第一句 总是：super(…)来调用父类对应的构造方法。</li>
+<li>先向上追溯到Object，然后再依次向下执行类的初始化块和构造方法，直到当前子类为止</li>
+</ol>
+<p><strong>对象的比较**</strong> ==<strong><strong>和</strong></strong>equals()**</p>
+<p>==：</p>
+<ol>
+<li>比较两基本类型变量的值是否相等</li>
+<li>比较两个引用类型的值即内存地址是否相等，即是否指向同一对象</li>
+</ol>
+<p>equals() ：</p>
 <ul>
-<li>区分类成员属性和方法的形参.</li>
-<li>调用当前对象的其他方法（可以省略）</li>
-<li>位置：任意</li>
+<li>两对象的内容是否一致</li>
 </ul>
-<p>构造方法中使用this。</p>
-<ul>
-<li>使用this来调用其它构造方法</li>
-<li>位置：必须是第一条语句</li>
-</ul>
-<p>this不能用于static方法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package thisDemo;</span><br><span class="line">/**</span><br><span class="line"> * this 是当前对象的引用</span><br><span class="line"> * 哪个对象调用了当前方法 哪个对象就是当前对象</span><br><span class="line"> * @author Administrator</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class Dog &#123;</span><br><span class="line">	String name;</span><br><span class="line">	int age;</span><br><span class="line">	</span><br><span class="line">	public void test() &#123;</span><br><span class="line">		System.out.println(this);</span><br><span class="line">		this.test();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	public void test02() &#123;</span><br><span class="line">		System.out.println(this);</span><br><span class="line">		this.test02();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">package thisDemo;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog wangcai = new Dog();</span><br><span class="line">		System.out.println(wangcai);</span><br><span class="line">		wangcai.test();</span><br><span class="line">		</span><br><span class="line">		Dog dahuang =new Dog();</span><br><span class="line">		System.out.println(dahuang);</span><br><span class="line">		dahuang.test();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="static-关键字"><a href="#static-关键字" class="headerlink" title="static 关键字"></a>static 关键字</h3><p>在类中，用static声明的成员变量为静态成员变量 ,或者叫做： 类属性，类变量.</p>
-<ul>
-<li>它为该类的公用变量，属于类，被该类的所有实例共享，在类被载入时被显式初始化，</li>
-<li>对于该类的所有对象来说，static成员变量只有一份。被该类的所有对象共享！！</li>
-<li>可以使用”对象.类属性”来调用。不过，一般都是用“类名.类属性”</li>
-<li>static变量置于方法区中！</li>
-</ul>
-<p>用static声明的方法为静态方法</p>
-<ul>
-<li>不需要对象，就可以调用(类名.方法名)</li>
-<li>在调用该方法时，不会将对象的引用传递给它，所以在static方法中不可访问非static的成员。</li>
-<li>静态方法不能以任何方式引用this和super关键字</li>
-</ul>
-<h3 id="静态初始化块"><a href="#静态初始化块" class="headerlink" title="静态初始化块"></a><strong>静态初始化块</strong></h3><ul>
-<li><p>如果希望加载后，对整个类进行某些初始化操作，可以使用static初始化块。</p>
-</li>
-<li><p>类第一次被载入时先执行static代码块；类多次载入时，static代码块只执行一次；Static经常用来进行static变量的初始化。</p>
-</li>
-<li><p>是在类初始化时执行，不是在创建对象时执行。</p>
-</li>
-<li><p>静态初始化块中不能访问非static成员。</p>
-</li>
-</ul>
-<h3 id="pakage"><a href="#pakage" class="headerlink" title="pakage"></a>pakage</h3><p>  <strong>作用：</strong></p>
-<ul>
-<li>为了解决类之间的重名问题。</li>
-<li><p>为了便于管理类：合适的类位于合适的包</p>
-<p>用法：</p>
-</li>
-<li><p>通常是类的第一句非注释性语句。</p>
-</li>
-<li><p>包名：域名倒着写即可，再加上模块名，并与内部管理类。</p>
-<p>注意事项：</p>
-<p>写项目时都要加包，不要使用默认包。</p>
-<p>com.gao和com.gao.car，这两个包没有包含关系，是两个完全独立的包。只是逻辑上看起来后者是前者的一部分。</p>
-<h3 id="JDK中的主要包"><a href="#JDK中的主要包" class="headerlink" title="JDK中的主要包"></a>JDK中的主要包</h3><p>java.lang</p>
-<p>包含一些Java语言的核心类，如String、Math、Integer、System和Thread，提供常用功能。</p>
-<p>java.awt</p>
-<p>包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。</p>
-<p>java.net</p>
-<p>包含执行与网络相关的操作的类。</p>
-<p>java.io</p>
-<p>包含能提供多种输入/输出功能的类。</p>
-<p>java.util</p>
-<p>包含一些实用工具类，如定义系统特性、使用与日期日历相关的函数。</p>
-</li>
-</ul>
-<h3 id="Import"><a href="#Import" class="headerlink" title="Import"></a><strong>Import</strong></h3><p>  作用：如果不适用import，我们如果用到其他包的类时，只能这么写：java.util.Date，代码量太大，不利于编写和维护。通过import可以导入其他包下面的类，从而可以在本类中直接通过类名来调用。</p>
-<p>  用法：</p>
-<p>  import  java.util.Date; </p>
-<p>  import  java.util.*;   //导入该包下所有的类。会降低编译速度，但不会降低运行速度。</p>
-<p>  注意要点：</p>
-<p>  java会默认导入java.lang包下所有的类，因此这些类我们可以直接使用。</p>
-<p>  如果导入两个同名的类，只能用包名+类名来显示调用相关类：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.util.Date date  = new  java.util.Date();</span><br></pre></td></tr></table></figure>
-<h2 id="import-static"><a href="#import-static" class="headerlink" title="import  static"></a><strong>import  static</strong></h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">–import static java.lang.Math.*;//导入Math类的所有静态属性</span><br><span class="line">–import static  java.lang.Math.PI;//导入Math类的PI属性</span><br></pre></td></tr></table></figure>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">–然后，我们可以在程序中直接使用：System.out.println(PI);</span><br></pre></td></tr></table></figure>
-<p>方法调用中的参数传递（重中之重）</p>
-<p>基本数据类型的参数传递：不能改变参数的值</p>
-<p>引用数据类型的参数传递：不能改变参数的值</p>
-<p>This修饰构造方法（必须是第一条语句）</p>
-<ul>
-<li>This代表当前对象自身的引用（必须new）</li>
-<li>This可以修饰属性，区别成员变量和局部变量</li>
-<li>This修饰方法</li>
-<li>This修饰构造方法（必须是第一条语句）</li>
-</ul>
-<p>static</p>
-<ul>
-<li>static变量：只有一份，属于类，可以类名. Static变量</li>
-<li>static方法: 类名. Static方法，不能出现this和super</li>
-<li>static代码块：只执行一次，最早执行的（类第一次调用）</li>
-</ul>
-<p>package import</p>
-<ul>
-<li><p>包：作用  </p>
-</li>
-<li><p>导入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import  com.bjsxt.oop.*;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>静态导入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import static java.lang.Math.PI;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Static-单例模式"><a href="#Static-单例模式" class="headerlink" title="Static  单例模式"></a>Static  单例模式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package 单例02;</span><br><span class="line">public class GoodsInfo &#123;</span><br><span class="line">public void showGoodsInfo() &#123;</span><br><span class="line">System.out.println(&quot;商品详情&quot;);</span><br><span class="line">UserInfo info = UserInfo.getUserInfo();</span><br><span class="line">System.out.println(info.userName+info.psw);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">package 单例02;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line">public class UserInfo &#123;</span><br><span class="line">String userName;</span><br><span class="line">String psw;</span><br><span class="line">static UserInfo info;</span><br><span class="line">public static UserInfo getUserInfo() &#123;</span><br><span class="line">if (info == null) &#123;</span><br><span class="line">info = new UserInfo();</span><br><span class="line">Scanner input = new Scanner(System.in);</span><br><span class="line">System.out.println(&quot;请输入用户名&quot;);</span><br><span class="line">info.userName = input.next();</span><br><span class="line">System.out.println(&quot;请输入密码&quot;);</span><br><span class="line">info.psw = input.next();</span><br><span class="line">&#125;</span><br><span class="line">return info;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">package 单例02;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">UserInfo info = UserInfo.getUserInfo();</span><br><span class="line">GoodsList  list = new GoodsList();</span><br><span class="line">list.showGoodsList();</span><br><span class="line">GoodsInfo ginfo = new GoodsInfo();</span><br><span class="line">ginfo.showGoodsInfo();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">package 单例02;</span><br><span class="line">public class GoodsList &#123;</span><br><span class="line">public void showGoodsList() &#123;</span><br><span class="line">System.out.println(&quot;商品列表&quot;);</span><br><span class="line">UserInfo info = UserInfo.getUserInfo();</span><br><span class="line">System.out.println(info.userName);</span><br><span class="line">System.out.println(info.psw);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>静态代码块 在类被加载时会使用。</p>
-<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">package 构造方法;</span><br><span class="line"></span><br><span class="line">public class Dog &#123;</span><br><span class="line">	String name;</span><br><span class="line">	int age;</span><br><span class="line">	/**</span><br><span class="line">	 * 构造方法是创建对象的时候自动调用的方法</span><br><span class="line">	 * 构造方法的名字必须跟类名保持一致</span><br><span class="line">	 * 构造方法返回的类型是当前类的类型，但是在定义方法的时候无需声明返回值</span><br><span class="line">	 * 同时构造方法也不能return </span><br><span class="line">	 * </span><br><span class="line">	 * 当一个类中没有任何构造方法，系统会自动生成一个无参的构造方法</span><br><span class="line">	 * 如果类中声明了构造方法，则系统不会再生成无参构造方法</span><br><span class="line">	 * </span><br><span class="line">	 * 构造方法也可以重载</span><br><span class="line">	 */</span><br><span class="line">	public Dog()&#123;</span><br><span class="line">		name = &quot;旺财&quot;;</span><br><span class="line">		age = 2;</span><br><span class="line">		System.out.println(&quot;无参构造&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Dog(String name)&#123;</span><br><span class="line">		name = &quot;旺财&quot;;</span><br><span class="line">		age = 2;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	public Dog(String name,int age) &#123;</span><br><span class="line">		//this在构造方法中可以用来调用其他的构造方法  </span><br><span class="line">		//必须出现在构造方法的第一行  </span><br><span class="line">		this();</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package 构造方法;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">//		Dog wangcai = new Dog();</span><br><span class="line">//		wangcai.name = &quot;旺财&quot;;</span><br><span class="line">//		wangcai.age = 10;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		Dog dahuang = new Dog(&quot;大黄&quot;, 10);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="面向对象的三大基本特征：封装、继承、多态"><a href="#面向对象的三大基本特征：封装、继承、多态" class="headerlink" title="面向对象的三大基本特征：封装、继承、多态"></a>面向对象的三大基本特征：封装、继承、多态</h1><p>程序设计追求的是：高内聚 低耦合</p>
-<p>高内聚：就是类的内部数据操作细节自己完成，不允许外部干涉</p>
-<p>低耦合：仅暴露少量的方法给外部使用</p>
-<p>使用访问控制符，实现封装   </p>
-<p>成员（成员变量或成员方法）访问权限共有四种：</p>
-<p>public 公共的    </p>
-<p>可以被项目中所有的类访问。(项目可见性)</p>
-<p>protected 受保护的</p>
-<p>可以被这个类本身访问；同一个包中的所有其他的类访问；被它的子类（同一个包以及不同包中的子类）访问</p>
-<p>default／friendly 默认的/友好的（包可见性） </p>
-<p>被这个类本身访问；被同一个包中的类访问。</p>
-<p>private 私有的    </p>
-<p>只能被这个类本身访问。（类可见性）</p>
-<p>类的访问权限只有两种</p>
-<p>public 公共的</p>
-<p>可被同一项目中所有的类访问。 (必须与文件名同名)</p>
-<p>default／friendly 默认的/友好的</p>
-<p>可被同一个包中的类访问。</p>
-<p><img src="/2019/04/26/java笔记5/QW3.jpg" alt></p>
-<p><strong>封装要点：</strong></p>
-<p>•类的属性的处理:</p>
-<p>1.一般使用private.  (除非本属性确定会让子类继承)</p>
-<p>2.提供相应的get/set方法来访问相关属性. 这些方法通常是<strong>public</strong>，从而提供对属性的读取操作。  （注意：boolean变量的get方法是用：is开头!）</p>
-<p>•一些只用于本类的辅助性方法可以用private</p>
-<p>•希望其他类调用的方法用public</p>
+<p><strong>自定义类须重写equals()，否则其对象比较结果总是false。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package equalsdemo;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 判断相等的两种方式</span><br><span class="line">  *</span><br><span class="line">   *1， == </span><br><span class="line"></span><br><span class="line">- 用来判断基本数据类型的数据是否相等</span><br><span class="line"></span><br><span class="line">- 也可以用来判断引用数据类型   判断两个引用是否相等  当且仅当两个引用指向的是同一个对象  == 判断才返回true</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- *2，equals  </span><br><span class="line"></span><br><span class="line">- 判断引用数据类型的对象是否相等</span><br><span class="line"></span><br><span class="line">- 如果一个类没有重写该方法，则自动调用到Object中的equals  判断规则跟 == 一样</span><br><span class="line"></span><br><span class="line">- 如果要自定义判断相等的规则，则在本类中重写equals 方法，在方法内定义比较规则</span><br><span class="line"></span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">   */</span><br><span class="line">  public class Test &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">  	String str01 = &quot;abc&quot;;</span><br><span class="line">  	String str02 = new String(&quot;abc&quot;);</span><br></pre></td></tr></table></figure>
+<p>  System.out.println(str01 == str02);<br>  System.out.println(str01.equals(str02));<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -645,7 +553,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sj13579.github.io/2019/04/26/java笔记5/" title="java 笔记5">https://sj13579.github.io/2019/04/26/java笔记5/</a>
+    <a href="https://sj13579.github.io/2019/04/29/java笔记6/" title="java笔记6">https://sj13579.github.io/2019/04/29/java笔记6/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -673,8 +581,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/23/java笔记4/" rel="next" title="java 笔记4">
-                <i class="fa fa-chevron-left"></i> java 笔记4
+              <a href="/2019/04/26/java笔记5/" rel="next" title="java 笔记5">
+                <i class="fa fa-chevron-left"></i> java 笔记5
               </a>
             
           </div>
@@ -682,10 +590,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/29/java笔记6/" rel="prev" title="java笔记6">
-                java笔记6 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -901,7 +805,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类的属性："><span class="nav-number">1.1.</span> <span class="nav-text">类的属性：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存分析"><span class="nav-number">1.2.</span> <span class="nav-text">内存分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#形参和实参"><span class="nav-number">1.2.1.</span> <span class="nav-text">形参和实参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this关键字"><span class="nav-number">1.2.2.</span> <span class="nav-text">this关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static-关键字"><span class="nav-number">1.2.3.</span> <span class="nav-text">static 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态初始化块"><span class="nav-number">1.2.4.</span> <span class="nav-text">静态初始化块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pakage"><span class="nav-number">1.2.5.</span> <span class="nav-text">pakage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK中的主要包"><span class="nav-number">1.2.6.</span> <span class="nav-text">JDK中的主要包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Import"><span class="nav-number">1.2.7.</span> <span class="nav-text">Import</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import-static"><span class="nav-number">1.3.</span> <span class="nav-text">import  static</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-单例模式"><span class="nav-number">1.4.</span> <span class="nav-text">Static  单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造方法"><span class="nav-number">1.5.</span> <span class="nav-text">构造方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象的三大基本特征：封装、继承、多态"><span class="nav-number">2.</span> <span class="nav-text">面向对象的三大基本特征：封装、继承、多态</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的重写（override）"><span class="nav-number">1.1.</span> <span class="nav-text">方法的重写（override）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要重写父类的方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">为什么需要重写父类的方法?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super关键字"><span class="nav-number">1.1.2.</span> <span class="nav-text">super关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final关键字"><span class="nav-number">1.1.3.</span> <span class="nav-text">final关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object类"><span class="nav-number">1.1.4.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重写："><span class="nav-number">1.1.5.</span> <span class="nav-text">重写：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类"><span class="nav-number">1.2.</span> <span class="nav-text">抽象类</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1092,9 +996,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://sj13579.github.io/2019/04/26/java笔记5/';
-          this.page.identifier = '2019/04/26/java笔记5/';
-          this.page.title = 'java 笔记5';
+          this.page.url = 'https://sj13579.github.io/2019/04/29/java笔记6/';
+          this.page.identifier = '2019/04/29/java笔记6/';
+          this.page.title = 'java笔记6';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://评论.disqus.com/embed.js';
