@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="内部类将一个类定义置入另一个类定义中就叫作“内部类” 类中定义的内部类特点  内部类作为外部类的成员，可以直接访问外部类的成员（包括private成员），反之则不行。  内部类做为外部类成员，可声明为private、默认、protected或public。  内部类成员只有在内部类的范围之内是有效的。  用内部类定义在外部类中不可访问的属性。这样就在外部类中实现了比外部类的private还要小的访">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java 笔记8">
+<meta property="og:url" content="https://sj13579.github.io/2019/05/05/java-笔记8/index.html">
+<meta property="og:site_name" content="也许我可以">
+<meta property="og:description" content="内部类将一个类定义置入另一个类定义中就叫作“内部类” 类中定义的内部类特点  内部类作为外部类的成员，可以直接访问外部类的成员（包括private成员），反之则不行。  内部类做为外部类成员，可声明为private、默认、protected或public。  内部类成员只有在内部类的范围之内是有效的。  用内部类定义在外部类中不可访问的属性。这样就在外部类中实现了比外部类的private还要小的访">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/05/java-笔记8/qq1.jpg">
+<meta property="og:updated_time" content="2019-05-05T11:56:47.042Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java 笔记8">
+<meta name="twitter:description" content="内部类将一个类定义置入另一个类定义中就叫作“内部类” 类中定义的内部类特点  内部类作为外部类的成员，可以直接访问外部类的成员（包括private成员），反之则不行。  内部类做为外部类成员，可声明为private、默认、protected或public。  内部类成员只有在内部类的范围之内是有效的。  用内部类定义在外部类中不可访问的属性。这样就在外部类中实现了比外部类的private还要小的访">
+<meta name="twitter:image" content="https://sj13579.github.io/2019/05/05/java-笔记8/qq1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sj13579.github.io/2019/05/05/java-笔记8/">
+
+
+
+
+
+  <title>java 笔记8 | 也许我可以</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://sj13579.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">也许我可以</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录中成长</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/05/05/java-笔记8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maybe I can">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/QQ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="也许我可以">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java 笔记8</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T19:39:15+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-05T19:56:47+08:00">
+                2019-05-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/05/java-笔记8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/05/java-笔记8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><p><strong>将一个类定义置入另一个类定义中就叫作“内部类”</strong></p>
+<p>类中定义的内部类特点</p>
+<ul>
+<li><p>内部类作为外部类的成员，可以直接访问外部类的成员（包括private成员），反之则不行。</p>
+</li>
+<li><p>内部类做为外部类成员，可声明为private、默认、protected或public。</p>
+</li>
+<li><p>内部类成员只有在内部类的范围之内是有效的。</p>
+</li>
+<li><p>用内部类定义在外部类中不可访问的属性。这样就在外部类中实现了比外部类的private还要小的访问权限。</p>
+</li>
+<li><p>编译后生成两个类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OuterClass.class 和OuterClass$InnerClass.class</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+  <a id="more"></a>
+<p>  <strong>列子：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class WaiBuLei &#123; //外部类</span><br><span class="line">class InnerClass&#123;//内部类</span><br><span class="line">public void show()&#123;</span><br><span class="line">//内部类中的方法</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">public void print() &#123;</span><br><span class="line">//外部类的方法可以创建内部类的对象，来调用内部类的方法</span><br><span class="line">innerClass i = new innerClass();</span><br><span class="line">i.show();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">其他类不能直接访问内部类，只能间接方法，创建外部类的对象，再创建内部类的对象,才能使用内部类</span><br><span class="line">WaiBuLei n = new WaiBuLei();</span><br><span class="line">innerClass = n.new nnerClass();</span><br></pre></td></tr></table></figure>
+<p><strong>如果外部类和内部类具有相同的成员变量或方法，内部类默认访问自己的成员变量或方法，如果要访问外部类的成员变量需要使用this关键字.</strong></p>
+<h2 id="内部类分类"><a href="#内部类分类" class="headerlink" title="内部类分类"></a>内部类分类</h2><p>成员内部类   静态内部类  方法内部类     匿名内部类</p>
+<p>package 成员内部类;<br>import 成员内部类.OuterClass.InnnerClass;<br>public class Test {<br>public static void main(String[] args) {<br>OuterClass oc = new OuterClass();<br>oc.test();<br>//用一个外部类的对象来创建内部类的对象<br>InnnerClass ic = oc.new InnnerClass();<br>ic.test01();<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">package 成员内部类;</span><br><span class="line">//外部类</span><br><span class="line">public class OuterClass &#123;</span><br><span class="line">//在这里定义外部类的成员</span><br><span class="line">//外部类的成员变量</span><br><span class="line">private String name = &quot;张三&quot;;	</span><br><span class="line">//在这里定义的类 就是成员内部类</span><br><span class="line">class InnnerClass&#123;</span><br><span class="line">//内部类的成员变量</span><br><span class="line">private String name = &quot;李四&quot;;</span><br><span class="line">//内部类的成员方法</span><br><span class="line">public void test01() &#123;</span><br><span class="line">//当内部类的成员 和外部类的成员重名的时候   在内部类默认使用内部类的成员</span><br><span class="line">//如果在内部类想要使用外部类的重名成员 需要用 外部类名.this.成员名</span><br><span class="line">System.out.println(&quot;内部类的成员方法&quot;+OuterClass.this.name);</span><br><span class="line">&#125;	</span><br><span class="line">&#125;</span><br><span class="line">//外部类的成员方法</span><br><span class="line">public void test() &#123;</span><br><span class="line">System.out.println(&quot;外部类的成员方法&quot;);</span><br><span class="line">//外部类的成员方法可以直接使用内部类</span><br><span class="line">InnnerClass ic = new InnnerClass();</span><br><span class="line">ic.test01();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/05/java-笔记8/qq1.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">•在内部类前加static 就是静态内部类、</span><br><span class="line">如果内部类中的属性或方法是static，</span><br><span class="line">则这个内部类必须是static</span><br><span class="line">//定义静态内部类</span><br><span class="line">public class StaticOuterClass &#123;</span><br><span class="line">static private String info = &quot;hello&quot;;</span><br><span class="line">static class InnerClass&#123;</span><br><span class="line">public void show() &#123;</span><br><span class="line">//静态内部类只能使用外部类的静态属性  System.out.println(info);</span><br><span class="line">&#125;</span><br><span class="line">&#125; &#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">//new 的是内部类的对象</span><br><span class="line">•  StaticOuterClass.InnerClass  in = new StaticOuterClass.InnerClass();</span><br><span class="line">in.show();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>静态内部类只能使用外部类的静态属性或方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package 静态内部类;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">//静态的内容都是属于类所有，可以通过类名直接调用</span><br><span class="line">//所以静态的内部类也是属于类所有，可以直接用外部类的类名来调用  来创建对象</span><br><span class="line">OuterClass.InnerClass ic = new OuterClass.InnerClass();</span><br><span class="line">ic.test();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package 静态内部类;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 当内部类中有静态的成员的时候，内部类就必须声明为静态内部类</span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">  */</span><br><span class="line">  public class OuterClass &#123;</span><br><span class="line">  static String name = &quot;张三&quot;;</span><br><span class="line">  static class InnerClass&#123;</span><br><span class="line">  //静态内部类只能使用外部类的静态成员</span><br><span class="line">  //不能使用外部类的非静态成员</span><br><span class="line">  public void test() &#123;</span><br><span class="line">  System.out.println(name);</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><p>没有名字的内部类</p>
+<p>匿名内部类有个前提条件：必须存在继承和实现关系</p>
+<p>适合只需要使用一次的类</p>
+<p>普通内部类                              匿名内部类</p>
+<p>创建接口或抽象类的对象，写一对{</p>
+<p>​    //实现接口或者抽象类的抽象方法</p>
+<p>}.实现的方法名（）;</p>
+<p>package 匿名内部类;<br>public class Test {<br>public static void main(String[] args) {<br>//当一个接口的实现类只需要使用一次，这时候可以直接用接口来new对象<br>//接口不能直接创建对象，所以在new对象之前 先将接口实现成一个实现类    再用该实现类去创建对象<br>MyInterface  mi = new MyInterface() {<br>@Override<br>public void test() {<br>System.out.println(“内部类的方法”);<br>}<br>};<br>mi.test();<br>}<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">package 匿名内部类;</span><br><span class="line">public interface MyInterface &#123;</span><br><span class="line">void test();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">package 方法中的内部类;</span><br><span class="line">//方法中的内部类</span><br><span class="line">public class OuterClass &#123;</span><br><span class="line">//外部类的成员变量</span><br><span class="line">private String name;</span><br><span class="line">//外部类的成员方法</span><br><span class="line">public void test() &#123;</span><br><span class="line">//方法中的内部类     </span><br><span class="line">//方法中的内部类 只能在方法内使用，出了方法就不能再使用方法中的内部类了</span><br><span class="line">class InnerClass&#123;</span><br><span class="line">//内部类的成员变量</span><br><span class="line">private String name;</span><br><span class="line">//内部类的成员方法</span><br><span class="line">public void test() &#123;</span><br><span class="line">System.out.println(&quot;内部类的方法&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//方法中的内部类 只能在方法内使用，出了方法就不能再使用方法中的内部类了</span><br><span class="line">//所以要想使用内部类  就必须在方法结束之前使用内部来创建一个对象  使用内部类的对象来调用内部类的方法</span><br><span class="line">new InnerClass().test();</span><br><span class="line">&#125;</span><br><span class="line">//外部类的方法</span><br><span class="line">public void test02() &#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package 方法中的内部类;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">OuterClass oc = new OuterClass();</span><br><span class="line">oc.test();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h2><ul>
+<li>对象空间的分配：</li>
+<li>使用new关键字创建对象即可</li>
+<li></li>
+<li>对象空间的释放：</li>
+<li>传统的C/C++语言，需要程序员负责回收已经分配内存。显式回收垃圾回收的缺点：</li>
+<li>程序忘记及时回收，从而导致内存泄露，降低系统性能。</li>
+<li>程序错误回收程序核心类库的内存，导致系统崩溃。</li>
+<li>Java语言不需要程序员直接控制内存回收，是由JRE在后台自动回收不再使用的内存，称为垃圾回收机制(Garbage Collection)。</li>
+<li>可以提高编程效率。</li>
+<li>保护程序的完整性。</li>
+<li>其开销影响性能。Java虚拟机必须跟踪程序中有用的对象，确定哪些是无用的。</li>
+<li>垃圾回收机制只回收JVM堆内存里的对象空间。</li>
+<li>对其他物理连接，比如数据库连接、输入流输出流、Socket连接无能为力</li>
+<li></li>
+<li>现在的JVM有多种垃圾回收实现算法，表现各异。</li>
+<li>垃圾回收发生具有不可预知性，程序无法精确控制垃圾回收机制执行。</li>
+<li>可以将对象的引用变量设置为null，暗示垃圾回收机制可以回收该对象。</li>
+<li>程序员可以通过System.gc()或者Runtime.getRuntime().gc()来通知系统进行垃圾回收，会有一些效果，但是系统是否进行垃圾回收依然不确定。</li>
+<li></li>
+<li>垃圾回收机制回收任何对象之前，总会先调用它的finalize方法（如果覆盖该方法，让一个新的引用变量重新引用该对象，则会重新激活对象）。</li>
+<li>永远不要主动调用某个对象的finalize方法，应该交给垃圾回收机制调用</li>
+<li></li>
+</ul>
+<h2 id="JAVA常用类"><a href="#JAVA常用类" class="headerlink" title="JAVA常用类"></a>JAVA常用类</h2><p>•基本数据类型的包装类</p>
+<p>•字符串相关类</p>
+<p>u不可变字符序列：String</p>
+<p>u可变字符序列：StringBuffer、StringBuilder</p>
+<p>•Math类</p>
+<p>•File类</p>
+<p>•枚举类</p>
+<ul>
+<li>包装类是将基本类型封装到一个类中</li>
+<li>包含属性和方法，方便对象操作</li>
+<li>包装类位于java.lang包中</li>
+</ul>
+<h2 id="包装类和基本类型"><a href="#包装类和基本类型" class="headerlink" title="包装类和基本类型"></a>包装类和基本类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">基本数据类型转换为包装类</span><br><span class="line">Integer intValue = new Integer(21);</span><br><span class="line">或Integer intValue = new Integer(&quot;21&quot;);</span><br><span class="line">Integer intValue = Integer.valueOf(&quot;21&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">包装类转换成基本类型</span><br><span class="line">Integer integerId=new Integer(25);</span><br><span class="line">int intId=integerId.intValue();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">基本类型和包装类的自动转换</span><br><span class="line">Integer intObject = 5;</span><br><span class="line">int intValue = intObject</span><br><span class="line">包装类并不是用来取代基本类型的</span><br></pre></td></tr></table></figure>
+<h2 id="自动装箱和自动拆箱-A-auto-boxing-amp-unboxing"><a href="#自动装箱和自动拆箱-A-auto-boxing-amp-unboxing" class="headerlink" title="自动装箱和自动拆箱    A(auto-boxing &amp; unboxing)"></a>自动装箱和自动拆箱    A(auto-boxing &amp; unboxing)</h2><p>自动装箱</p>
+<ul>
+<li>基本类型就自动地封装到与它相同类型的包装中，如：</li>
+<li>Integer i = 100;</li>
+<li>本质上是，编译器编译时为我们添加了：</li>
+<li>Integer i = Integer.valueOf(100</li>
+</ul>
+<p>自动拆箱</p>
+<ul>
+<li>包装类对象自动转换成基本类型数据。如：</li>
+<li>int  a = new Integer(100);</li>
+<li>本质上，编译器编译时为我们添加了：</li>
+<li>int  a = new Integer(100).intValue();</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1、装箱 与拆箱</span><br><span class="line">装箱: 基本 --&gt;类</span><br><span class="line">new Integer(int)</span><br><span class="line">Integer.valueOf(int i) ;</span><br><span class="line">拆箱: 类  --&gt;基本</span><br><span class="line">intValue()</span><br><span class="line">2、方法</span><br><span class="line">1)、与字符串转换的方法</span><br><span class="line">a)、字符串 --&gt;Integer</span><br><span class="line">Integer(String s)</span><br><span class="line">Integer.parseInt(String s)</span><br><span class="line">Integer.valueOf(String s);</span><br><span class="line">b)、Integer --&gt;字符串</span><br><span class="line">toString()</span><br><span class="line">String.valueOf(Object obj) ;</span><br><span class="line">Integer --&gt;int +&quot;&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package 基本数据类型的包装类;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">String str = &quot;123456&quot;;</span><br><span class="line">//		int sum = 0;</span><br><span class="line">//		for (int i = 0; i &lt; str.length(); i++) &#123;</span><br><span class="line">//			char c = str.charAt(i);</span><br><span class="line">//			int c1 = (c-48);</span><br><span class="line">//			c1 *= Math.pow(10, str.length()-1-i);</span><br><span class="line">//			sum += c1;</span><br><span class="line">//		&#125;</span><br><span class="line">//		</span><br><span class="line">//		System.out.println(sum+1);</span><br><span class="line">Integer ig = new Integer(str);</span><br><span class="line">ig = Integer.valueOf(str,16);</span><br><span class="line">int i = ig.intValue();</span><br><span class="line">System.out.println(i);</span><br><span class="line">//用指定的进制来将表示数字的字符串转换为数字</span><br><span class="line">int a = Integer.parseInt(&quot;123&quot;,16);</span><br><span class="line">//将一个数字转为指定进制的数字</span><br><span class="line">str = Integer.toBinaryString(10);</span><br><span class="line">str = Integer.toHexString(123);</span><br><span class="line">//把数字转换为字符串</span><br><span class="line">str =  Integer.toString(123,16);</span><br><span class="line">System.out.println(str);</span><br><span class="line">//自动装箱   就是自动将int类型的变量 封装成了一个Integer类型的对象</span><br><span class="line">Integer ig2 = 123;</span><br><span class="line">//自动拆箱 ，自动将Integer类型的对象中包含的int类型的变量读出来</span><br><span class="line">int b = ig2;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>String类位于java.lang包中，具有丰富的方法</p>
+<p>计算字符串的长度、比较字符串、连接字符串、提取字符串</p>
+<p>Java字符串就是Unicode字符序列，例如串“Java”就是4个Unicode字符J,a,v,a组成的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Java允许使用符号&quot;+&quot;把两个字符串连接起来</span><br><span class="line">String s1 = “Hello”;String s2 = “World!”;</span><br><span class="line">String s = s1 + s2; //HelloWorld!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#125;char charAt(int index)</span><br><span class="line">◦返回字符串中第index个字符。</span><br><span class="line">&#125;boolean equals(String other)</span><br><span class="line">◦如果字符串与other相等，返回true</span><br><span class="line">&#125;boolean equalsIgnoreCase(String other)</span><br><span class="line">◦如果字符串与other相等（忽略大小写），则返回true</span><br><span class="line">&#125;int indexOf(String str)    lastIndexOf(String str,int idx)</span><br><span class="line">&#125;int length()</span><br><span class="line">◦返回字符串的长度。</span><br><span class="line">&#125;String replace(char oldChar,char newChar)</span><br><span class="line">◦返回一个新串，它是通过用 newChar 替换此字符串中出现的所有oldChar而生成的</span><br><span class="line">◦</span><br><span class="line">◦代码：StringTest1.java</span><br><span class="line">&#125;boolean startsWith(String prefix)</span><br><span class="line">◦ 如果字符串以prefix开始，则返回true</span><br><span class="line">&#125;boolean endsWith(String prefix) </span><br><span class="line">◦如果字符串以prefix结尾，则返回true</span><br><span class="line">&#125;String substring(int beginIndex)</span><br><span class="line">&#125;String substring(int beginIndex,int endIndex)</span><br><span class="line">◦返回一个新字符串，该串包含从原始字符串beginIndex到串尾或endIndex-1的所有字符</span><br><span class="line">&#125;String toLowerCase()</span><br><span class="line">◦返回一个新字符串，该串将原始字符串中的所有大写字母改成小写字母</span><br><span class="line">&#125;String toUpperCase()</span><br><span class="line">◦返回一个新字符串，该串将原始字符串中的所有小写字母改成大写字母</span><br><span class="line">&#125;String trim()</span><br><span class="line">◦返回一个新字符串，该串删除了原始字符串头部和尾部的空格</span><br><span class="line">◦</span><br><span class="line">◦代码：StringTest2.java</span><br></pre></td></tr></table></figure>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">package 字符串;</span><br><span class="line">import java.io.UnsupportedEncodingException;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 字符串常用方法</span><br><span class="line">- @author tang</span><br><span class="line">  *</span><br><span class="line">  */</span><br><span class="line">  public class StringDemo02 &#123;</span><br><span class="line">  public static void main(String[] args) throws UnsupportedEncodingException &#123;</span><br><span class="line">  String str = &quot;abcdefga&quot;;</span><br><span class="line">  String str02 = new String(&quot;abcdefg&quot;);</span><br><span class="line">  //通过下标来获取字符串中指定的字符</span><br><span class="line">  //System.out.println(str.charAt(4));</span><br><span class="line">  //字符串类中重写了equals方法，重新制定了判断相等的规则为字符串的内容是否相等</span><br><span class="line">  //System.out.println(str == str02);</span><br><span class="line">  //System.out.println(str.equals(str02));</span><br><span class="line">  //忽略大小写进行比较</span><br><span class="line">  //System.out.println(str.equalsIgnoreCase(str02));</span><br><span class="line">  //字符串的查找  查找第一次出现的下标</span><br><span class="line">  //System.out.println(str.indexOf(97));</span><br><span class="line">  //查找最后一次出现的位置</span><br><span class="line">  //System.out.println(str.lastIndexOf(&quot;a&quot;));</span><br><span class="line">  //获取字符串的长度</span><br><span class="line">  //System.out.println(str.length());</span><br><span class="line">  //字符串的替换</span><br><span class="line">  //String str03 = str.replace(&quot;a&quot;, &quot;*&quot;);</span><br><span class="line">  //判断字符串的前缀</span><br><span class="line">  //System.out.println(str.startsWith(&quot;abcdfga&quot;));</span><br><span class="line">  //判断字符串的后缀</span><br><span class="line">  //System.out.println(str.endsWith(&quot;abcdefga&quot;));</span><br><span class="line">  //字符串的提取从指定的位置开始  提取到字符串结束</span><br><span class="line">  //System.out.println(str.substring(3));</span><br><span class="line">  //字符串的提取  从指定的位置提取到指定的位置  包含开始的位置  不包含结束的位置</span><br><span class="line">  //System.out.println(str.substring(1, 5));</span><br><span class="line">  //大小写转换</span><br><span class="line">  //System.out.println(str.toUpperCase());</span><br><span class="line">  //去处前后的空格</span><br><span class="line">  //System.out.println(str.trim());</span><br><span class="line">  //字符串比较大小</span><br><span class="line">  //str = &quot;abh&quot;;</span><br><span class="line">  //int i = str.compareTo(&quot;ade&quot;);</span><br><span class="line">  //System.out.println(i);</span><br><span class="line">  //字符串的链接</span><br><span class="line">  //String  str03 = str.concat(&quot;123&quot;);</span><br><span class="line">  //判断字符串中是否包含指定字符串</span><br><span class="line">  //boolean b = str.contains(&quot;abc&quot;);</span><br><span class="line">  //按照指定的编码格式 将字符串拆分成字节数组</span><br><span class="line">  //		str = &quot;你好&quot;;</span><br><span class="line">  //		byte [] bs = str.getBytes(&quot;UTF-8&quot;);</span><br><span class="line">  //		System.out.println(new String(bs,&quot;UTF-8&quot;));</span><br><span class="line">  //字符串的剪切</span><br><span class="line">  str = &quot;hello i am teacher ma  &quot;;</span><br><span class="line">  String [] strs = str.split(&quot; &quot;);</span><br><span class="line">  System.out.println(Arrays.toString(strs));</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package 字符串;</span><br><span class="line">import java.nio.charset.Charset;</span><br><span class="line">public class StringDemo &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">//使用双引号标记出来的字符串是保存在共享区，</span><br><span class="line">//当已经有一个相同内容的字符串的时候，代码中再标记一个字符串，系统就不会再去共享区创建一个新的对象</span><br><span class="line">//而是直接返回已有的字符串对象的地址</span><br><span class="line">String str = &quot;abc&quot;;</span><br><span class="line">String str02 = new String(&quot;abc&quot;);</span><br><span class="line">String str03 = &quot;abc&quot;;</span><br><span class="line">System.out.println(str == str03);</span><br><span class="line">//字符串的创建</span><br><span class="line">str = new String();</span><br><span class="line">str = new String(&quot;abc&quot;);</span><br><span class="line">//通过一个byte类型的数组来创建一个字符串</span><br><span class="line">str = new String(new byte[]&#123;97,98,99,100&#125;,1,3);</span><br><span class="line">str = new String(new char[]&#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;&#125;);</span><br><span class="line">System.out.println(str);	</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+	
+
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Maybe I can
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sj13579.github.io/2019/05/05/java-笔记8/" title="java 笔记8">https://sj13579.github.io/2019/05/05/java-笔记8/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/29/java-script数组代码/" rel="next" title="java script数组代码">
+                <i class="fa fa-chevron-left"></i> java script数组代码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/QQ1.jpg" alt="Maybe I can">
+            
+              <p class="site-author-name" itemprop="name">Maybe I can</p>
+              <p class="site-description motion-element" itemprop="description">人的眼睛有5.76亿像素,但却终究看不懂人心.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://home.cnblogs.com/" target="_blank" title="博客园">
+                      
+                        <i class="fa fa-fw fa-globe"></i>博客园</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/3695610095" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/ai-mei-69-21" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/p/f054333ac9e6" title="博客个性化链接" target="_blank">博客个性化链接</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类分类"><span class="nav-number">1.1.</span> <span class="nav-text">内部类分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名内部类"><span class="nav-number">1.2.</span> <span class="nav-text">匿名内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">1.3.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA常用类"><span class="nav-number">1.4.</span> <span class="nav-text">JAVA常用类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包装类和基本类型"><span class="nav-number">1.5.</span> <span class="nav-text">包装类和基本类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动装箱和自动拆箱-A-auto-boxing-amp-unboxing"><span class="nav-number">1.6.</span> <span class="nav-text">自动装箱和自动拆箱    A(auto-boxing &amp; unboxing)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.6.1.</span> <span class="nav-text">字符串</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maybe I can</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">20.3k</span>
+  
+</div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">QQ空间 &mdash; <a class="theme-link" target="_blank" href="https://user.qzone.qq.com/1043342549/main">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共20.3k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://评论.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sj13579.github.io/2019/05/05/java-笔记8/';
+          this.page.identifier = '2019/05/05/java-笔记8/';
+          this.page.title = 'java 笔记8';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://评论.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '7iCLIQ6ttDxyMjAKSz2HYGpO-gzGzoHsz',
+        appKey: 'IgEfM73Jl1fBmP8LcBTn5HkN',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<!-- ҳ����С���� -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
+
+
+
