@@ -86,20 +86,22 @@
 
 
 
-<meta name="description" content="多态就是程序的最终状态只有在执行过程中才被决定而非在编译期间就决定了。  java中如何实现多态?使用多态的好处? 引用变量的两种类型： 编译时类型（模糊一点，一般是一个父类） public  void (Pet pet); 由声明时的类型决定。 运行时类型（运行时，具体是哪个子类就是哪个子类） 由实际对应的对象类型决定。 多态的存在要有3个必要条件：  ​                 要有继">
+<meta name="description" content="String Buffer类 123456789101112131415•将一个数字字符串转换成逗号分隔的数字串，即从右边开始每三个数字用逗号分隔•利用StringBuffer类的length()和insert ()方法实现需求public class TestInsert &amp;#123; public static void main(String[] args) &amp;#123; Scanner i">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java 笔记7">
-<meta property="og:url" content="https://sj13579.github.io/2019/04/29/java笔记7/index.html">
+<meta property="og:title" content="java笔记9">
+<meta property="og:url" content="https://sj13579.github.io/2019/05/10/java笔记9/index.html">
 <meta property="og:site_name" content="也许我可以">
-<meta property="og:description" content="多态就是程序的最终状态只有在执行过程中才被决定而非在编译期间就决定了。  java中如何实现多态?使用多态的好处? 引用变量的两种类型： 编译时类型（模糊一点，一般是一个父类） public  void (Pet pet); 由声明时的类型决定。 运行时类型（运行时，具体是哪个子类就是哪个子类） 由实际对应的对象类型决定。 多态的存在要有3个必要条件：  ​                 要有继">
+<meta property="og:description" content="String Buffer类 123456789101112131415•将一个数字字符串转换成逗号分隔的数字串，即从右边开始每三个数字用逗号分隔•利用StringBuffer类的length()和insert ()方法实现需求public class TestInsert &amp;#123; public static void main(String[] args) &amp;#123; Scanner i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://sj13579.github.io/2019/04/29/java笔记7/QQ1.jpg">
-<meta property="og:updated_time" content="2019-04-29T12:07:22.121Z">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/10/java笔记9/qw1.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/10/java笔记9/qw2.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/10/java笔记9/qw3.jpg">
+<meta property="og:updated_time" content="2019-05-10T12:15:24.958Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java 笔记7">
-<meta name="twitter:description" content="多态就是程序的最终状态只有在执行过程中才被决定而非在编译期间就决定了。  java中如何实现多态?使用多态的好处? 引用变量的两种类型： 编译时类型（模糊一点，一般是一个父类） public  void (Pet pet); 由声明时的类型决定。 运行时类型（运行时，具体是哪个子类就是哪个子类） 由实际对应的对象类型决定。 多态的存在要有3个必要条件：  ​                 要有继">
-<meta name="twitter:image" content="https://sj13579.github.io/2019/04/29/java笔记7/QQ1.jpg">
+<meta name="twitter:title" content="java笔记9">
+<meta name="twitter:description" content="String Buffer类 123456789101112131415•将一个数字字符串转换成逗号分隔的数字串，即从右边开始每三个数字用逗号分隔•利用StringBuffer类的length()和insert ()方法实现需求public class TestInsert &amp;#123; public static void main(String[] args) &amp;#123; Scanner i">
+<meta name="twitter:image" content="https://sj13579.github.io/2019/05/10/java笔记9/qw1.jpg">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://sj13579.github.io/2019/04/29/java笔记7/">
+  <link rel="canonical" href="https://sj13579.github.io/2019/05/10/java笔记9/">
 
 
 
 
 
-  <title>java 笔记7 | 也许我可以</title>
+  <title>java笔记9 | 也许我可以</title>
   
 
 
@@ -294,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/29/java笔记7/">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/05/10/java笔记9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Maybe I can">
@@ -311,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java 笔记7</h1>
+          <h1 class="post-title" itemprop="name headline">java笔记9</h1>
         
 
         <div class="post-meta">
@@ -323,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-29T19:58:36+08:00">
-                2019-04-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-10T19:53:37+08:00">
+                2019-05-10
               </time>
             
 
@@ -339,8 +341,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-29T20:07:22+08:00">
-                2019-04-29
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-10T20:15:24+08:00">
+                2019-05-10
               </time>
             
           </span>
@@ -376,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/29/java笔记7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/29/java笔记7/" itemprop="commentCount"></span>
+                <a href="/2019/05/10/java笔记9/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/10/java笔记9/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -399,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k
+                  1k
                 </span>
               
 
@@ -415,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -436,101 +438,52 @@
       
 
       
-        <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p><strong>就是程序的最终状态只有在执行过程中才被决定而非在编译期间就决定了。</strong></p>
-<ul>
-<li>java中如何实现多态?使用多态的好处?</li>
-<li>引用变量的两种类型：</li>
-<li>编译时类型（模糊一点，一般是一个父类）</li>
-<li>public  void (Pet pet);</li>
-<li>由声明时的类型决定。</li>
-<li>运行时类型（运行时，具体是哪个子类就是哪个子类）</li>
-<li>由实际对应的对象类型决定。</li>
-<li>多态的存在要有3个必要条件：</li>
-</ul>
-<p>​                 要有继承，要有方法重写，父类引用指向子类对象</p>
+        <h1 id="String-Buffer类"><a href="#String-Buffer类" class="headerlink" title="String Buffer类"></a>String Buffer类</h1><p><img src="/2019/05/10/java笔记9/qw1.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">•将一个数字字符串转换成逗号分隔的数字串，</span><br><span class="line">即从右边开始每三个数字用逗号分隔</span><br><span class="line">•利用StringBuffer类的length()和insert ()方法实现需求</span><br><span class="line">public class TestInsert &#123; </span><br><span class="line">public static void main(String[] args) &#123; </span><br><span class="line">Scanner input = new Scanner(System.in);</span><br><span class="line">System.out.print(&quot;请输入一串数字： &quot;);</span><br><span class="line">String nums = input.next();</span><br><span class="line">StringBuffer str=new StringBuffer(nums);</span><br><span class="line">for(int i=str.length()-3;i&gt;0;i=i-3)&#123;</span><br><span class="line">str.insert(i,&apos;,&apos;);</span><br><span class="line">&#125;</span><br><span class="line">System.out.print(str);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>String：不可变字符序列</strong></p>
+<p><strong>String Builder：可变字符序列、效率高、线程不安全</strong></p>
+<p><strong>String Buffer：可变字符序列、效率低、线程安全</strong></p>
 <a id="more"></a>
-<h2 id="方法的调用看引用-方法的执行看对象"><a href="#方法的调用看引用-方法的执行看对象" class="headerlink" title="方法的调用看引用,方法的执行看对象"></a>方法的调用看引用,方法的执行看对象</h2><p>作用:</p>
-<p>多态</p>
-<ul>
-<li>提高了程序的可扩展性和可维护性提高代码复用性</li>
-</ul>
-<p>封装</p>
-<ul>
-<li>安全</li>
-<li><p>提高代码复用性</p>
-<p>继承</p>
-</li>
-<li><p>提高代码复用性</p>
-</li>
-</ul>
-<p>实现多态的步骤</p>
-<ul>
-<li>编写父类</li>
-<li>编写子类 子类重写父类方法</li>
-<li>运行时,使用父类的类型,子类的对象</li>
-</ul>
-<h3 id="引用数据类型的类型转换"><a href="#引用数据类型的类型转换" class="headerlink" title="引用数据类型的类型转换"></a>引用数据类型的类型转换</h3><p>子类转换为父类：自动转换</p>
-<ul>
-<li><h2 id="上转型对象不能操作子类新增的成员变量和方法。"><a href="#上转型对象不能操作子类新增的成员变量和方法。" class="headerlink" title="上转型对象不能操作子类新增的成员变量和方法。"></a>上转型对象不能操作子类新增的成员变量和方法。</h2></li>
-<li><p>上转型对象可以操作子类继承或重写的成员变量和方法</p>
-</li>
-<li><p>如果子类重写了父类的某个方法，上转型对象调用该方法时，是调用的重写方法。</p>
-</li>
-</ul>
-<p>父类转换为子类：强制转换</p>
-<ul>
-<li><p>（绝不是做手术，而是父类的真面目就是一个子类，否则会出现类型转换错误）</p>
-</li>
-<li><p>为了防止转换出错可以先用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">instanceof</span><br></pre></td></tr></table></figure>
-<p>判断类型,再去转换</p>
-</li>
-</ul>
-<h2 id="接口-interface"><a href="#接口-interface" class="headerlink" title="接口  interface"></a>接口  interface</h2><ul>
-<li>为什么需要接口?接口和抽象类的区别?</li>
-<li>接口就是比“抽象类”还“抽象”的“抽象类”，可以更加规范的对子类进行约束。全面地专业地实现了：规范和具体实现的分离。</li>
-<li>接口就是规范，定义的是一组规则，体现了现实世界中“如果你是…则必须能…”的思想。如果你是天使，则必须能飞。如果你是汽车，则必须能跑。如果你好人，则必须干掉坏人；如果你是坏人，则必须欺负好人。</li>
-<li>接口的本质是契约，就像我们人类的法律一样。制定好后大家都遵守</li>
-<li>项目的具体需求是多变的，我们必须以不变应万变才能从容开发，此处的“不变”就是“规范”。因此，我们开发项目往往都是面向接口编程！</li>
-</ul>
+<h1 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a><strong>Math类</strong></h1><p>包含了常见的数学运算函数。</p>
+<p>random()生成[0,1)之间的随机浮点数</p>
+<p>生成：0-10之间的任意整数：</p>
+<p>int   a =  (int)(10*Math.random());</p>
+<p>生成：20-30之间的任意整数：</p>
+<p>int   b = 20 + (int)(10*Math.random());</p>
+<p># </p>
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a><strong>枚举</strong></h1><p>枚举类型：</p>
 <ol>
-<li>接口不是类,接口是一种引用数据类型</li>
-<li>接口中的属性都必须是public static  final ,声明的时候可以省略   但是接口中的成员变量必须在声明的时候就进行初始化</li>
-<li>接口中的方法全都是  public abstract 的方法, public abstract可以省略不写</li>
-<li>接口不能被实例化</li>
-<li>实现类必须实现接口的所有方法</li>
-<li>类可以实现多个接口</li>
-<li>接口中不可以有构造方法</li>
+<li>只能够取特定值中的一个</li>
+<li>使用enum关键字</li>
+<li>所有的枚举类型隐性地继承自 java.lang.Enum。（枚举实质上还是类！而每个被枚举的成员实质就是一个枚举类型的实例，他们默认都是public static final的。可以直接通过枚举类型名直接使用它们。）</li>
+<li>强烈建议当你需要定义一组常量时，使用枚举类型</li>
 </ol>
-<h3 id="接口相关规则："><a href="#接口相关规则：" class="headerlink" title="接口相关规则："></a>接口相关规则：</h3><ul>
-<li><strong>接口中所有方法都是抽象的。</strong></li>
-<li><strong>即使没有显式的将接口中的成员用public标示，也是public访问类型的</strong></li>
-<li><strong>接口中变量默认用 public static final标示，所以接口中定义的变量就是全局静态常量。</strong></li>
-<li></li>
-<li><strong>可以定义一个新接口，用extends去继承一个已有的接口</strong></li>
-<li><strong>接口不能继承普通类</strong></li>
-<li><strong>可以定义一个类，用implements去实现一个接口中所有方法。</strong></li>
-<li><strong>可以定义一个抽象类，用implements去实现一个接口中部分方法。</strong></li>
-</ul>
-<h3 id="如何定义接口"><a href="#如何定义接口" class="headerlink" title="如何定义接口?"></a>如何定义接口?</h3><p>格式：</p>
-<p>[访问修饰符]  interface 接口名   [extends  父接口1，父接口2…]  {</p>
-<p>常量定义      //总是public   static  final</p>
-<p>方法定义       //总是：public   abstract</p>
-<p>}</p>
-<h3 id="如何实现接口"><a href="#如何实现接口" class="headerlink" title="如何实现接口"></a>如何实现接口</h3><p>子类通过implements来实现接口中的规范</p>
-<p>接口不能创建实例，但是可用于声明引用变量类型。</p>
-<p>一个类实现了接口，必须实现接口中所有的方法，并且这些方法只能是public的。</p>
-<p>Java的类只支持单继承，接口支持多继承</p>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package interfacedemo;</span><br><span class="line">/**</span><br><span class="line"></span><br><span class="line">- 1，接口可以继承其他的接口,接口支持多继承</span><br><span class="line">- 2，一个类用implements 关键字去实现一个接口，一个类可以实现多个接口</span><br><span class="line">- 3，一个普通的类实现接口，则必须将接口中的所有抽象方法都实现</span><br><span class="line">- 4，一个抽象类实现接口，可以不实现接口中的抽象方法</span><br><span class="line">- @author tang</span><br><span class="line">  */</span><br><span class="line">  public interface MyInterface&#123;</span><br><span class="line">  //接口中可以定义成员变量，接口中的所有成员变量默认都是用public static final 修饰</span><br><span class="line">  String name = &quot;wangcai&quot;;</span><br><span class="line">  //接口中所有的方法都是默认用public abstract 来修饰的</span><br><span class="line">  public abstract void test01();</span><br><span class="line">  public abstract void test02();</span><br><span class="line">  &#125;</span><br><span class="line">  ckage interfacedemo;</span><br><span class="line">  public class Person implements MyInterface&#123;</span><br><span class="line">  @Override</span><br><span class="line">  public void test01() &#123;</span><br><span class="line">  	System.out.println(&quot;test01&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  @Override</span><br><span class="line">  public void test02() &#123;</span><br><span class="line">  	System.out.println(&quot;test02&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>C++支持多重继承，Java支持单重继承</p>
-<p>C++多重继承的危险性在于一个类可能继承了同一个方法的不同实现，会导致系统崩溃。</p>
-<p>Java中，一个类只能继承一个类，但同时可以实现多个接口，既可以实现多重继承的效果和功能，也避免的多重继承的危险性。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Student extents Person implements Runner，Flyer</span><br><span class="line"></span><br><span class="line">&#123;…&#125;</span><br></pre></td></tr></table></figure>
-<p>注意：extends 必须位于implements之前</p>
-<p><img src="/2019/04/29/java笔记7/QQ1.jpg" alt></p>
+<h1 id="异常机制"><a href="#异常机制" class="headerlink" title="异常机制"></a><strong>异常机制</strong></h1><p>异常是指在程序的运行过程中所发生的不正常的事件，它会中断正在运行的程序</p>
+<p>Java编程语言使用异常处理机制为程序提供了错误处理的能力</p>
+<p><strong>Java中如何进行异常处理</strong></p>
+<p>Java的异常处理是通过5个关键字来实现的：try、catch、 finally、throw、throws</p>
+<p><img src="/2019/05/10/java笔记9/qw2.jpg" alt></p>
+<p>`</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public void method()&#123;`</span><br><span class="line">`try &#123;`</span><br><span class="line">`// 代码段(此处不会产生异常)`</span><br><span class="line">`&#125; catch (异常类型 ex) &#123;`</span><br><span class="line">`// 对异常进行处理的代码段`</span><br><span class="line">`&#125;`</span><br><span class="line">`// 代码段`</span><br><span class="line">`&#125;`</span><br><span class="line">`•使用try-catch块捕获异常，分为三种情况：`</span><br><span class="line">`第二种情况：出现异常`</span><br><span class="line">`public void method()&#123;`</span><br><span class="line">`try &#123;`</span><br><span class="line">`// 代码段 1`</span><br><span class="line">`// 产生异常的代码段 2`</span><br><span class="line">`// 代码段 3`</span><br><span class="line">`&#125; catch (异常类型 ex) &#123;`</span><br><span class="line">`// 对异常进行处理的代码段4`</span><br><span class="line">`&#125;`</span><br><span class="line">`// 代码段5`</span><br><span class="line">`&#125;`</span><br><span class="line">`第三种情况：异常类型不匹配`</span><br><span class="line">`public void method()&#123;`</span><br><span class="line">`try &#123;`</span><br><span class="line">`// 代码段 1`</span><br><span class="line">`// 产生异常的代码段 2`</span><br><span class="line">`// 代码段 3`</span><br><span class="line">`&#125; catch (异常类型 ex) &#123;`</span><br><span class="line">`// 对异常进行处理的代码段4`</span><br><span class="line">`&#125;`</span><br><span class="line">`// 代码段5`</span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常见的异常类型"><a href="#常见的异常类型" class="headerlink" title="常见的异常类型"></a><strong>常见的异常类型</strong></h2><p><img src="/2019/05/10/java笔记9/qw3.jpg" alt></p>
+<p><strong>在try-catch块后加入finally块</strong></p>
+<p><strong>是否发生异常都执行</strong></p>
+<p><strong>不执行的唯一情况:</strong></p>
+<p><strong>1.中止当前虚拟机：System.exit()</strong></p>
+<p><strong>Java语言中通过throws声明某个方法可能抛出的各种异常</strong></p>
+<p><strong>可以同时声明多个异常，由逗号隔开</strong> </p>
+<p><strong>异常分为Checked异常和运行时异常</strong></p>
+<p><strong>Checked异常必须捕获或者声明抛出</strong></p>
+<p><strong>运行时异常不要求必须捕获或者声明抛出</strong></p>
+<p><strong>try-catch-finally中存在return语句的执行顺序</strong>:</p>
+<p>1.不管有木有出现异常，finally块中代码都会执行；　</p>
+<p>2、当try和catch中有return时，finally仍然会执行；　</p>
+<p>3、finally是在return后面的表达式运算后执行的（此时并没有返回运算后的值，而是先把要返回的值保存起来，管finally中的代码怎么样，</p>
+<p>返回的值都不会改变，任然是之前保存的值），所以函数返回值是在finally执行前确定的；　</p>
+<p>4、finally中最好不要包含return，否则程序会提前退出，返回值不是try或catch中保存的返回值。</p>
+<p><strong>throw和throws关键字的区别：</strong></p>
+<p>1.throws出现在方法函数头；而throw出现在函数体。<br>2.throws表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某种异常对象。</p>
+<p>3.两者都是消极处理异常的方式（这里的消极并不是说这种方式不好），只是抛出或者可能抛出异常，但是不会由函数去处理异常，真正的处理异常由函数的上层调用处理。</p>
 
       
     </div>
@@ -563,7 +516,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sj13579.github.io/2019/04/29/java笔记7/" title="java 笔记7">https://sj13579.github.io/2019/04/29/java笔记7/</a>
+    <a href="https://sj13579.github.io/2019/05/10/java笔记9/" title="java笔记9">https://sj13579.github.io/2019/05/10/java笔记9/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -591,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/29/java笔记6/" rel="next" title="java 笔记6">
-                <i class="fa fa-chevron-left"></i> java 笔记6
+              <a href="/2019/05/05/java-笔记8/" rel="next" title="java 笔记8">
+                <i class="fa fa-chevron-left"></i> java 笔记8
               </a>
             
           </div>
@@ -600,10 +553,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/29/java-script数组代码/" rel="prev" title="java script数组代码">
-                java script数组代码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -819,7 +768,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多态"><span class="nav-number">1.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的调用看引用-方法的执行看对象"><span class="nav-number">1.1.</span> <span class="nav-text">方法的调用看引用,方法的执行看对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用数据类型的类型转换"><span class="nav-number">1.1.1.</span> <span class="nav-text">引用数据类型的类型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上转型对象不能操作子类新增的成员变量和方法。"><span class="nav-number">1.2.</span> <span class="nav-text">上转型对象不能操作子类新增的成员变量和方法。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口-interface"><span class="nav-number">1.3.</span> <span class="nav-text">接口  interface</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口相关规则："><span class="nav-number">1.3.1.</span> <span class="nav-text">接口相关规则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何定义接口"><span class="nav-number">1.3.2.</span> <span class="nav-text">如何定义接口?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何实现接口"><span class="nav-number">1.3.3.</span> <span class="nav-text">如何实现接口</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String-Buffer类"><span class="nav-number">1.</span> <span class="nav-text">String Buffer类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math类"><span class="nav-number">2.</span> <span class="nav-text">Math类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举"><span class="nav-number">3.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常机制"><span class="nav-number">4.</span> <span class="nav-text">异常机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的异常类型"><span class="nav-number">4.1.</span> <span class="nav-text">常见的异常类型</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1010,9 +959,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://sj13579.github.io/2019/04/29/java笔记7/';
-          this.page.identifier = '2019/04/29/java笔记7/';
-          this.page.title = 'java 笔记7';
+          this.page.url = 'https://sj13579.github.io/2019/05/10/java笔记9/';
+          this.page.identifier = '2019/05/10/java笔记9/';
+          this.page.title = 'java笔记9';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://评论.disqus.com/embed.js';
