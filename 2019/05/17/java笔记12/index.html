@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="java,">
 
 
 
@@ -86,16 +86,21 @@
 
 
 
-<meta name="description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宋健的个人博客">
-<meta property="og:url" content="https://sj13579.github.io/archives/2019/05/index.html">
+<meta name="description" content="线程的概念程序：Program,是一个指令的集合 进程：Process（正在执行的程序）是一个静态的概念 进程是程序的一次静态的执行过程 占用特定的地址空间 每个空间都是独立的 ，由三个部分组成 c p u , data , code  缺点：内存的浪费 c p u 的负担 线程：是进程中的一个 “单一的连续控制流程”（a singles Thread, equential flow of con">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java笔记12">
+<meta property="og:url" content="https://sj13579.github.io/2019/05/17/java笔记12/index.html">
 <meta property="og:site_name" content="宋健的个人博客">
-<meta property="og:description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
+<meta property="og:description" content="线程的概念程序：Program,是一个指令的集合 进程：Process（正在执行的程序）是一个静态的概念 进程是程序的一次静态的执行过程 占用特定的地址空间 每个空间都是独立的 ，由三个部分组成 c p u , data , code  缺点：内存的浪费 c p u 的负担 线程：是进程中的一个 “单一的连续控制流程”（a singles Thread, equential flow of con">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/17/java笔记12/qw1.jpg">
+<meta property="og:image" content="https://sj13579.github.io/2019/05/17/java笔记12/qw2.jpg">
+<meta property="og:updated_time" content="2019-05-17T15:20:19.877Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宋健的个人博客">
-<meta name="twitter:description" content="人的眼睛有5.76亿像素,但却终究看不懂人心.">
+<meta name="twitter:title" content="java笔记12">
+<meta name="twitter:description" content="线程的概念程序：Program,是一个指令的集合 进程：Process（正在执行的程序）是一个静态的概念 进程是程序的一次静态的执行过程 占用特定的地址空间 每个空间都是独立的 ，由三个部分组成 c p u , data , code  缺点：内存的浪费 c p u 的负担 线程：是进程中的一个 “单一的连续控制流程”（a singles Thread, equential flow of con">
+<meta name="twitter:image" content="https://sj13579.github.io/2019/05/17/java笔记12/qw1.jpg">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://sj13579.github.io/archives/2019/05/">
+  <link rel="canonical" href="https://sj13579.github.io/2019/05/17/java笔记12/">
 
 
 
 
 
-  <title>归档 | 宋健的个人博客</title>
+  <title>java笔记12 | 宋健的个人博客</title>
   
 
 
@@ -150,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://sj13579.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,247 +281,336 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/05/17/java笔记12/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maybe I can">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/QQ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋健的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">java笔记12</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-17T23:10:14+08:00">
+                2019-05-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-17T23:20:19+08:00">
+                2019-05-17
+              </time>
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 16 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/17/java笔记12/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/17/java笔记12/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/17/java笔记12/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">java笔记12</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-17T23:10:14+08:00" content="2019-05-17">
-          05-17
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/14/java笔记11/" itemprop="url">
-              
-                <span itemprop="name">java笔记11</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-14T19:41:10+08:00" content="2019-05-14">
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/13/java笔记10/" itemprop="url">
-              
-                <span itemprop="name">java笔记10</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-13T19:33:54+08:00" content="2019-05-13">
-          05-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="线程的概念"><a href="#线程的概念" class="headerlink" title="线程的概念"></a>线程的概念</h1><p>程序：Program,是一个指令的集合</p>
+<p>进程：Process（正在执行的程序）是一个静态的概念</p>
+<p>进程是程序的一次静态的执行过程 占用特定的地址空间</p>
+<p>每个空间都是独立的 ，由三个部分组成 c p u , data , code </p>
+<p>缺点：内存的浪费 c p u 的负担</p>
+<p>线程：是进程中的一个 “单一的连续控制流程”（a singles Thread, equential flow of control)/执行路径</p>
+<p>1.线程又被称为轻量级进程。</p>
+<p>2.一个进程可拥有多个并行的线程</p>
+<p>3.一个进程中的线程共享相同的内存单元 /内存地址空间 —&gt;可以访问相同的变量和对象，而且他们从同一堆中分配对象–&gt;通信、数据的交换、同步操作。</p>
+<p>4.由于线程间的通信是在同一地址空间中进行的，所以 不需要额外的通信机制，这就使得通信更简便而且信息的传递速度额更快。</p>
+<p>5.java虚拟机启动的时候会有一个进程java.exe，该进程至少有一个进程，在负责java程序的执行。而且这个线程运行的代码存在于main方法中，该线程称之为主线程。</p>
+<p>6.一个进程中的线程共享代码和数据空间。</p>
+<p>7.线程结束，进程未必结束，但进程结束，线程一定结束</p>
+<p>8.进程中包含线程，线程是进程的一部分。</p>
+<a id="more"></a>
+<p><img src="/2019/05/17/java笔记12/qw1.jpg" alt></p>
+<h2 id="线程的执行"><a href="#线程的执行" class="headerlink" title="线程的执行"></a>线程的执行</h2><p>d.run()；//仅仅是对象调用方法，而是创建了线程但没有执行</p>
+<p>d.start()；//开启线程并执行该线程的run方法</p>
+<p><img src="/2019/05/17/java笔记12/qw2.jpg" alt></p>
+<p><strong>新生状态：</strong></p>
+<p>用new关键字建立一个线程后，该线程就处于新生状态</p>
+<p>处于新生状态的线程有自己的内存空间，通过调用start（）方法进入就绪状态</p>
+<p><strong>就绪状态：</strong></p>
+<p>处于就绪状态线程具备了 运行条件，但没有分配到CPU，处于线程就绪队列 等待系统为其分配CPU</p>
+<p>当系统选定一个等待执行的线程后，他就从就绪状态回到执行状态。</p>
+<p><strong>运行状态：</strong></p>
+<p>在运行状态的线程执行自己的run方法中的代码 直到等待某资源而阻塞或完成任何而死亡。</p>
+<p>如果在给定的时间片段没有执行结束，就被系统给换下来回到等待执行的状态。</p>
+<p><strong>阻塞状态：</strong></p>
+<p>处于运行状态的线程在某些情况下，如执行了sleep（睡眠）方法，或等待I/o设备的资源，将让出CPU并暂时停止自己的运行，进入阻塞状态</p>
+<p>在阻塞状态的线程不能进入就绪队列，只有当引起阻塞的原因消除时，如睡眠的时间已到，或等待的I/O设备空闲下来，线程便转入就绪状态，重新道就绪状态，重新到就绪列中排队等待，被系统选中后从原来的停止的位置开始继续执行</p>
+<p><strong>死亡状态：</strong></p>
+<p>死亡状态是线程生命周期中的最后一个阶段，线程死亡的原因有三个，一个是正常运行的线程完成了它的全部工作；另一个是线程</p>
+<p>被强制性的终止，如通过stop方法来终止一个线程{不推荐使用}；三是线程抛出未捕获的异常。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static Thread currentThread()  返回目前正在执行的线程</span><br><span class="line">public final String getName()  返回线程的名称</span><br><span class="line">public final int getPriority() 返回线程的优先级</span><br><span class="line">public final void setPriority(int i)  设定线程的优先级</span><br><span class="line">public final boolean isAlive()  判断线程是否在活动 如果是 返回true 否则返回 false</span><br><span class="line">public final void join()  调用该方法的线程强制执行，其它线程处于阻塞状态，该线程执行完毕后，其他现场线程再执行</span><br><span class="line">public static void sleep(long millis) 使用当前正在执行的线程休眠millis 秒，线程处于阻塞状态</span><br><span class="line">public static void yield ()  当前执行的线程暂停一次 允许其他的线程执行，不阻塞 线程进入就绪状态 如果没有其他等待执行的线程 这个时候当前线程就会马上执行。</span><br></pre></td></tr></table></figure>
+<p><strong>阻塞状态：</strong></p>
+<p>sleep ：不会释放锁 sleep时别的线程也不可以访问锁定的对象</p>
+<p>yield： 让出CPU的使用权 从运行态直接进入就绪态。让CPU重新挑选哪一个线程进入允许状态</p>
+<p>join： 当某个线程等待另一个线程执行结束后，才继续执行时，使调用该方法的线程在此之前执行完毕，也就是等待调用该方法的线程执行完毕后再往下继续执行</p>
+<p><strong>同步的前提是：</strong></p>
+<p>1、必须有两个或两个以上的进程</p>
+<p>2、必须是多个线程使用同一资源</p>
+<p>3、必须保证同步中只能有一个线程在运行</p>
+<h1 id="线程同步小结："><a href="#线程同步小结：" class="headerlink" title="线程同步小结："></a>线程同步小结：</h1><p><strong>同步监视器</strong></p>
+<p>synchronized (obj){}中的obj为同步监视器</p>
+<p>同步代码块中同步监视器可以是任何对象 但是推荐使用共享资源作为同步监视器 </p>
+<p>同步方法中无需指定同步监视器 因为同步方法中的监视器是this 也就是该对象本身</p>
+<p><strong>同步监视器的执行过程</strong></p>
+<p>第一个线程访问， 锁定同步监视器 执行其中的代码</p>
+<p>第二个线程访问 发现同步监视器被锁定 无法访问</p>
+<p>第一个线程访问完毕 解锁同步监视器</p>
+<p>第二个线程访问 发现同步监视器未锁 锁定并访问</p>
+<h1 id="线程通信"><a href="#线程通信" class="headerlink" title="线程通信"></a>线程通信</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">final void  wait () 表示线程一直等待 直到其他的线程通知</span><br><span class="line">final void wait (long timeout)  线程等待指定毫秒参数的时间</span><br><span class="line">final void wait (long timeout,int nanos ) 线程等待指定毫秒、微妙的时间</span><br><span class="line">final void notify () 唤醒一个处于等待状态的线程</span><br><span class="line">final void notifyAll() 唤醒同一个对象上所有调用wait() 方法的线程，优先级别高的线程优先运行</span><br></pre></td></tr></table></figure>
+<p>注意事项：以上的方法只能在同步方法或者同步代码块中使用 否则会抛出异常</p>
+<h2 id="死锁："><a href="#死锁：" class="headerlink" title="死锁："></a>死锁：</h2><p>同步可以保证资源共享操作的正确性 但是过多同步也会产生死锁</p>
+<p>死锁一般情况下表示互相等待，是程序运行时出现的一种问题</p>
+<p><strong>线程的生产者与消费者</strong></p>
+<p>生产者不断生产，消费者不断取走生产者生产的产品</p>
+<p>生产者生产产品放到一个区域中 之后消费者从此区域里取出产品</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/10/HTML笔记1/" itemprop="url">
-              
-                <span itemprop="name">HTML笔记1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-10T20:19:58+08:00" content="2019-05-10">
-          05-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/10/java笔记9/" itemprop="url">
-              
-                <span itemprop="name">java笔记9</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-10T19:53:37+08:00" content="2019-05-10">
-          05-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/05/java-笔记8/" itemprop="url">
-              
-                <span itemprop="name">java 笔记8</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-05T19:39:15+08:00" content="2019-05-05">
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+	
+
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Maybe I can
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sj13579.github.io/2019/05/17/java笔记12/" title="java笔记12">https://sj13579.github.io/2019/05/17/java笔记12/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/14/java笔记11/" rel="next" title="java笔记11">
+                <i class="fa fa-chevron-left"></i> java笔记11
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -524,6 +618,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -544,8 +652,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -653,6 +770,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的概念"><span class="nav-number">1.</span> <span class="nav-text">线程的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的执行"><span class="nav-number">1.1.</span> <span class="nav-text">线程的执行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程同步小结："><span class="nav-number">2.</span> <span class="nav-text">线程同步小结：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程通信"><span class="nav-number">3.</span> <span class="nav-text">线程通信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁："><span class="nav-number">3.1.</span> <span class="nav-text">死锁：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -814,6 +947,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -831,6 +968,18 @@
       <script id="dsq-count-scr" src="https://评论.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sj13579.github.io/2019/05/17/java笔记12/';
+          this.page.identifier = '2019/05/17/java笔记12/';
+          this.page.title = 'java笔记12';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://评论.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
