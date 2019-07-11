@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux目录说明]]></title>
+    <url>%2F2019%2F07%2F11%2FLinux%E7%9B%AE%E5%BD%95%E5%90%8D%E8%AF%B4%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[Linux的磁盘管理理念与Window不一样1.Linux没有C: D: E:盘符概念，只有一个根目录/，所有的文件都存储在/下面的文件夹中。 2.Linux建议我们按它定义的文件夹存放文件。这个要求导致我们必须要记住它定义的文件夹。它定义的文件夹就是我们所说的Linux目录。 目录名 说明 12345678910111213141516171819202122232425262728293031323334353637383940414243/ 文件系统的根目录,所有的文件都放在根目录下bin 存放所有系统用户都可以使用的命令boot 存放系统的启动文件dev 存放系统驱动信息的 （device）etc 存放所有系统配置文件 (系统配置)home 存放普通用户的主目录(个人文件夹).lib 存放Linux系统的支持类库lost+found 在系统出现突发关机的时,Linux会尽可能的保存当前没有保存信息. 可以在开机的时候恢复****media 光驱的挂在区. 会显示光盘的文件.misc 自动挂载区, 插入U盘.显示U盘的文件mnt 手工挂载区,通过mount命令,手工将sub外设的数据挂载到这个文件夹net 存储网络设备信息.opt 存放大型安装软件,是一个软件安装目录proc 内存映射文件夹,将内存运行时的信息映射到这里,系统关闭就会清空root root管理员的主目录(个人文件夹)sbin super bin,只有root管理员可以使用的命令selinux 是一个系统安全加密软件srv service,存放系统服务信息sys system,存放系统支撑的文件tmp 存放临时文件,usr 存放用户安装的软件var 存放系统的日志]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTTP超文本传输协议]]></title>
     <url>%2F2019%2F06%2F15%2FHTTP%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE%2F</url>
     <content type="text"><![CDATA[HTTP超文本传输协议http(Hyper Text Transfer Protocol）超文本传输协议 作用：用于传输互联网中的数据HTTP消息：HTTP请求消息、HTTP响应消息HTTP请求消息：客户端发向服务器的请求消息HTTP响应消息：服务端回给客户端的响应消息 HTTP消息在客户端和服务端的传输 1、建立连接2、客户端发起响应消息3、服务器响应客户端的请求4、断开连接 HTTP协议有如下特点：1、HTTP协议是一个无状态的协议。(对事物的处理没有记忆能力)2、HTTP1.1支持连续连接，一次连接可以发送多个请求。3、HTTP协议是单向性的，只有客户端可以发起请求，服务器被动响应。HTTP请求的基本格式：请求行、请求头(消息头)、一个空行、实体内容(get方法中没有内容)请求行：请求方式 请求的资源路径 协议版本 HTTP响应的基本格式、状态行、 应答头、 一个空行、 响应实体状态行：协议版本 HTTP状态码 HTTP状态描述200 –&gt; OK404 –&gt; Not Found500 –&gt; Internal Server Error]]></content>

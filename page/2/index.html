@@ -291,6 +291,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/29/java-script数组代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maybe I can">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/QQ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋健的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/29/java-script数组代码/" itemprop="url">java script数组代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-29T21:10:30+08:00">
+                2019-04-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-29T21:15:59+08:00">
+                2019-04-29
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java-script/" itemprop="url" rel="index">
+                    <span itemprop="name">java script</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/29/java-script数组代码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/29/java-script数组代码/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  457
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="java-script-数组代码笔记"><a href="#java-script-数组代码笔记" class="headerlink" title="java script 数组代码笔记"></a>java script 数组代码笔记</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">//一、创建数组</span><br><span class="line">        //1.创建空数组</span><br><span class="line">        var arr = new Array();</span><br><span class="line">        console.log(arr.length);</span><br><span class="line">        //2.创建具有长度的数组</span><br><span class="line">        var arr2 = new Array(10);</span><br><span class="line">        console.log(arr2)</span><br><span class="line">        //3.创建一个带元素的数组</span><br><span class="line">        var arr3 = new Array(123, true, &quot;hello&quot;, new Date());</span><br><span class="line">        //4.创建一个带元素的数组2</span><br><span class="line">        var arr4 = [123];</span><br><span class="line">        console.log(arr4.length)</span><br><span class="line"></span><br><span class="line">​    //二、属性</span><br><span class="line">​    // length属性：表示数组的长度</span><br><span class="line">​    console.log(arr3);</span><br><span class="line">​    arr3.length = 0; //清空数组</span><br><span class="line">​    console.log(arr3);</span><br><span class="line">​    arr3.length = 4;</span><br><span class="line">​    console.log(arr3</span><br><span class="line"></span><br><span class="line">​    //三、方法</span><br><span class="line">​    var arrdemo = new Array(123, true, &quot;hello&quot;, new Date(), 444333);</span><br><span class="line">​    //join():指定一个字符，用该字符连接数组的每一个元素，并作为一个字符串返回</span><br><span class="line">​    var result = arrdemo.join(&quot;-&quot;);</span><br><span class="line">​    console.log(result);</span><br><span class="line"></span><br><span class="line">​    //push():向数组的末尾添加一个元素，返回数组的新长度</span><br><span class="line">​    result = arrdemo.push(&quot;world&quot;);</span><br><span class="line">​    console.log(result)</span><br><span class="line">​    console.log(arrdemo);</span><br><span class="line"></span><br><span class="line">​    //pop():从数组末尾取出一个元素，并返回该元素本身</span><br><span class="line">​    result = arrdemo.pop();</span><br><span class="line">​    console.log(result);</span><br><span class="line">​    console.log(arrdemo);</span><br><span class="line"></span><br><span class="line">​    //shift()：从数组头部取出一个元素，并返回该元素本身</span><br><span class="line">​    result = arrdemo.shift();</span><br><span class="line">​    console.log(result);</span><br><span class="line">​    console.log(arrdemo);</span><br><span class="line"></span><br><span class="line">​    //unshift()：向数组的头部添加一个元素，返回数组的新长度</span><br><span class="line">​    result = arrdemo.unshift(&quot;bbb&quot;);</span><br><span class="line">​    console.log(result);</span><br><span class="line">​    console.log(arrdemo);</span><br><span class="line"></span><br><span class="line">​    //concat()：拼接数组，并作为一个新的数组返回</span><br><span class="line">​    var a1 = [123, 234];</span><br><span class="line">​    var a2 = [&quot;aaa&quot;, &quot;bbb&quot;];</span><br><span class="line">​    var a3 = [new Date()];</span><br><span class="line">​    var newarr = a1.concat(a2, a3);</span><br><span class="line">​    console.log(newarr);</span><br><span class="line"></span><br><span class="line">​    //reverse():反转数组</span><br><span class="line">​    newarr.reverse();</span><br><span class="line">​    console.log(newarr);</span><br><span class="line"></span><br><span class="line">​    //sort():自然顺序</span><br><span class="line">​    //        var sortarr = [4534,22,66,88,123];</span><br><span class="line">​    var sortarr = [4534, 22, 66, 88, 123, &quot;A&quot;, &quot;a&quot;, &quot;ab&quot;, &quot;ba&quot;, &quot;abc&quot;, &quot;bac&quot;];</span><br><span class="line">​    sortarr.sort()</span><br><span class="line">​    console.log(sortarr);</span><br><span class="line"></span><br><span class="line">​    //splice()：删除指定位置，指定长度的元素，并在该位置添加新的元素</span><br><span class="line">​    var s1 = [&quot;aa&quot;, &apos;kjsdhf&apos;, &apos;123&apos;, 123, 123, 444, 555, 666];</span><br><span class="line">​    s1.splice(0,0,&quot;laowang&quot;);</span><br><span class="line">​    console.log(s1);</span><br><span class="line"></span><br><span class="line">​    //slice()；截取子数组</span><br><span class="line">​    var s2 = s1.slice(3,5);</span><br><span class="line">​    console.log(s2);</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+	
+
+
+    
+
+<div>
+  
+</div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sj13579.github.io/2019/04/29/java笔记7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2228,7 +2429,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2239,7 +2440,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2250,7 +2451,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2348,7 +2549,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.8k</span>
+    <span title="Site words total count">29.2k</span>
   
 </div>
 <div class="powered-by">
@@ -2374,7 +2575,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.8k字</span>
+  <span class="post-count">博客全站共29.2k字</span>
 </div>
 
         
